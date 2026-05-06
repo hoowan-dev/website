@@ -76,11 +76,16 @@ svg {
 }
 
 .hero-layout {
-  display: grid;
-  gap: 2.5rem;
-  grid-template-columns: minmax(0, 1.45fr) minmax(250px, 0.85fr);
-  align-items: start;
   padding-bottom: 2.5rem;
+  display: grid;
+  grid-template-columns: 1fr 300px;
+  gap: 3rem;
+  align-items: start;
+}
+
+.centered-hero {
+  display: flex;
+  justify-content: center;
 }
 
 .hero-panel {
@@ -89,13 +94,17 @@ svg {
   max-width: 720px;
 }
 
+.centered-hero .hero-panel {
+  text-align: center;
+}
+
 .eyebrow {
   margin: 0;
   text-transform: uppercase;
   letter-spacing: 0.3em;
   font-size: 0.78rem;
   font-weight: 700;
-  color: #7c3aed;
+  color: #94a3b8;
 }
 
 .hero-panel h1 {
@@ -149,6 +158,8 @@ svg {
   align-self: start;
   position: sticky;
   top: 2rem;
+  width: 300px;
+  z-index: 1;
 }
 
 .profile-image {
@@ -233,23 +244,11 @@ svg {
   margin-bottom: 2rem;
 }
 
-.education-subsection {
-  margin-top: 2.5rem;
-  padding-top: 2.5rem;
-  border-top: 1px solid rgba(148,163,184,0.12);
-}
-
-.education-subsection h3 {
-  margin: 0 0 1rem;
-  font-size: 1.08rem;
-  color: #f1f5f9;
-  font-weight: 700;
-}
-
-.education-subsection p {
-  margin: 0.5rem 0;
-  color: #cbd5e1;
-  line-height: 1.7;
+.certification-grid {
+  display: grid;
+  gap: 1.25rem;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  margin-bottom: 2rem;
 }
 
 .skill-card,
@@ -264,6 +263,11 @@ svg {
   padding: 1.75rem;
 }
 
+.cert-card {
+  display: grid;
+  gap: 1rem;
+}
+
 .skill-card h3,
 .cert-card h3,
 .experience-card h3,
@@ -275,36 +279,34 @@ svg {
 }
 
 .skill-card p,
-.cert-card p,
-.cert-card li,
 .experience-card p,
-.education-card p {
+.education-card p,
+.cert-card p {
   margin: 0;
   color: #cbd5e1;
   line-height: 1.7;
 }
 
-.certification-grid {
-  display: grid;
-  gap: 1.25rem;
-  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-}
-
-.compact-list {
-  margin: 0.8rem 0 0;
-  padding-left: 1.35rem;
-  list-style: disc;
+.cert-list {
+  margin: 0;
+  padding-left: 1.2rem;
   color: #cbd5e1;
 }
 
-.compact-list li {
-  margin-bottom: 0.65rem;
-  color: #cbd5e1;
+.cert-list li {
+  margin: 0.35rem 0;
 }
 
 .experience-card {
   display: grid;
   gap: 1rem;
+}
+
+.project-image {
+  width: 100%;
+  height: auto;
+  border-radius: 0.75rem;
+  margin-bottom: 0.5rem;
 }
 
 .item-header {
@@ -361,6 +363,8 @@ a {
   .sidebar {
     position: static;
     top: auto;
+    width: auto;
+    right: auto;
   }
 }
 

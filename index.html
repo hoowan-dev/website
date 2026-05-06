@@ -9,16 +9,19 @@
 </head>
 <body>
   <div class="page-shell">
-    <header class="site-header">
+    <header id="about" class="site-header">
       <a class="logo" href="#">Juan Becerra</a>
       <nav class="site-nav" aria-label="Primary">
         <a href="#about">About</a>
         <a href="#skills">Skills</a>
+        <a href="#education">Education</a>
+        <a href="#certifications">Certifications</a>
         <a href="#experience">Experience</a>
+        <a href="portfolio.html">Portfolio</a>
       </nav>
     </header>
 
-    <main id="about" class="hero-layout">
+    <main class="hero-layout">
       <section class="hero-panel">
         <p class="eyebrow">Software Engineer | Game Developer | Bad Web-Dev</p>
         <h1>Juan Becerra</h1>
@@ -30,9 +33,9 @@
         <p class="hero-copy">
           Outside of work, Juan is a gigging musician for several local and touring bands. 
           He enjoys doing session work for recording artists and playing live shows, and has experience in music production. 
-          That's probably not what you're here for, but if you want to check out his music, you can find it on his <a href="https://linktr.ee/jamnlikedamn" target="_blank" rel="noreferrer noopener">band Linktree</a>.
+          That probably won't help much on the job, but please consider this when looking for a personality hire.</a>
         </p>
-        <img src="media/profile.jpg" alt="Juan Becerra" class="profile-image" />
+        <img src="media/index/profile.jpg" alt="Juan Becerra" class="profile-image" />
         
       </section>
 
@@ -58,7 +61,10 @@
           <nav class="sidebar-nav" aria-label="Page">
             <a href="#about">About</a>
             <a href="#skills">Skills</a>
+            <a href="#education">Education</a>
+            <a href="#certifications">Certifications</a>
             <a href="#experience">Experience</a>
+            <a href="portfolio.html">Portfolio</a>
           </nav>
         </section>
       </aside>
@@ -96,39 +102,74 @@
             <h3>Project Management</h3>
             <p>JIRA, Confluence, Trello, Agile/Scrum/Waterfall</p>
           </div>
-        </div>
-        <div class="education-subsection">
-          <h3>Education</h3>
-          <p><strong>Bachelor of Science in Computer Science</strong></p>
-          <p>Boise State University, Boise, ID</p>
-          <p>2017 – 2021</p>
+          <div class="skill-card">
+            <h3>Music Performance</h3>
+            <p>Like 1/3 of a Bachelor of Music, Really Good at Bass, Cracked Copy of Ableton</p>
+          </div>
+          <div class="skill-card">
+            <h3>Personality Hire</h3>
+            <p>Sense of humor that can't be replicated with 1000 data centers</p>
+          </div>
         </div>
       </div>
     </section>
 
-    <section id="certifications" class="section section-light">
+    <section id="education" class="section">
+      <div class="section-inner">
+        <h2>Education</h2>
+        <article class="experience-card">
+          <div class="item-header">
+            <div>
+              <h3>Boise State University</h3>
+              <p class="item-subtitle">Bachelor of Science in Computer Science · Boise, ID</p>
+              <p class="item-subtitle">
+                <ul>
+                  <li>Data Structures</li>
+                  <li>Algorithms</li>
+                  <li>Version Control and Agile Development</li>
+                  <li>Computer Graphics (Graduate)</li>
+                  <li>Artificial Intelligence (Graduate)</li>
+                  <li>Parallel Computing (Graduate)</li>
+                  <li>Object-Oriented Design Patterns (Graduate)</li>
+                  <li>2D/3D Game Development</li>
+                  <li>Mobile Development</li>
+                  <li>Web Development</li>
+                  <li>Linear Algebra</li>
+                </ul>
+            </div>
+            <span>2017 – 2021</span>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section id="certifications" class="section">
       <div class="section-inner">
         <h2>Certifications</h2>
         <div class="certification-grid">
-          <div class="cert-card">
-            <h3>Udemy</h3>
-            <ul class="compact-list">
+          <article class="cert-card">
+            <div class="item-header">
+              <h3>Udemy</h3>
+            </div>
+            <ul class="cert-list">
               <li>Unreal Engine C++ Game Development</li>
               <li>Advanced C# Scripting in Unity</li>
               <li>Advanced C++ Programming</li>
               <li>Shader Development for Unity with Cg</li>
               <li>Vulkan API with C++</li>
             </ul>
-          </div>
-          <div class="cert-card">
-            <h3>Coursera</h3>
-            <ul class="compact-list">
+          </article>
+          <article class="cert-card">
+            <div class="item-header">
+              <h3>Coursera</h3>
+            </div>
+            <ul class="cert-list">
               <li>Game Engine Architecture</li>
               <li>Game Design Patterns</li>
               <li>Cherno – Game Engine Development Series</li>
               <li>Cherno – OpenGL Rendering Series</li>
             </ul>
-          </div>
+          </article>
         </div>
       </div>
     </section>
@@ -144,7 +185,12 @@
             </div>
             <span>2021 – Present</span>
           </div>
-          <p>Prototyped several navigation and simulation features in Unreal/C++ at Maxis, the studio behind the Sims franchise. Architected a motion-matching-based animation/locomotion system while working with designers and animators. Implemented animation tools in Maya/Python, including a machine-learning-based pose-matching library/generator.</p>
+          <p>Prototyped several navigation and simulation features in Unreal/C++ at
+            Maxis, the studio behind the Sims franchise. Architected a motionmatching-based animation/locomotion system while working with key
+            designers and animators. Implemented several animation development
+            tools in Maya/Python, including a machine-learning-based animation posematching library/generator. Worked closely with key development directors
+            and designers to rapidly iterate on game prototypes to "find the fun".
+</p>
         </article>
 
         <article class="experience-card">
@@ -155,7 +201,12 @@
             </div>
             <span>2020 – 2021</span>
           </div>
-          <p>Worked as a QA tester at an outsourced functional and localization testing firm for video games. Created well-documented bug reports using combinatorial, tree, regression, and ad hoc testing methodologies. Provided insight on existing bug reports using previous engine and gameplay programming knowledge.</p>
+          <p>Worked as a QA tester at Lionbridge, an outsourced functional and
+            localization testing firm for video games. Created well-documented bug
+            reports through a combination of combinatorial, tree, regression, and ad hoc
+            testing methodologies. Provided additional insight on existing bug reports
+            using previous knowledge of engine and gameplay programming.
+</p>
         </article>
 
         <article class="experience-card">
@@ -166,7 +217,11 @@
             </div>
             <span>2020</span>
           </div>
-          <p>Interned as a team lead for the development of TurnUp, a web/mobile app for youth activism and networking. Developed a cross-platform API in React Native and Express.js and handled pull requests, code reviews, and unit testing.</p>
+          <p>Interned as a team lead for the development of TurnUp, a web/mobile app
+            for a youth activism organization and networking. Developed cross-platform
+            API for application features in React Native and Express.js. Handled pull
+            requests, code reviews, and unit testing for the intern team’s feature
+            implementations</p>
         </article>
 
         <article class="experience-card">
@@ -177,7 +232,11 @@
             </div>
             <span>2020</span>
           </div>
-          <p>Developed a distributed content production pipeline for the World Museum project. Researched imaging processing and compression algorithms, and designed database schemas for digital asset management software.</p>
+          <p>Developed a distributed content production pipeline intended for Boise
+            State University’s “World Museum” project. Researched and implemented
+            computer imaging processing and compression algorithms to develop webbased digital asset management software. Designed and implemented
+            database schemas for the asset tagging system.
+</p>
         </article>
 
         <article class="experience-card">
@@ -188,14 +247,16 @@
             </div>
             <span>2019 – 2020</span>
           </div>
-          <p>Assisted in object-oriented design, test-driven development, and data structures courses. Held tutoring sessions for Java projects and refactored an auto-grading system for a new online summer curriculum.</p>
+          <p>Assisted in courses on object-oriented design principles, test-driven
+            development, and elementary data structures. Held tutoring sessions to
+            assist students in designing and debugging Java programming projects.
+            Refactored auto-grading system for new online summer curriculum.</p>
         </article>
       </div>
     </section>
 
-
     <footer class="footer">
-      <p>© 2026 Juan Becerra. Built with HTML and CSS.</p>
+      <p>© 2026 Juan Becerra. Built with hopes, dreams, and a free subscription to GitHub Copilot.</p>
     </footer>
   </div>
 </body>
