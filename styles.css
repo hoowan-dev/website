@@ -305,6 +305,11 @@ svg {
   display: none;
 }
 
+.item-description {
+  color: #cbd5e1;
+  line-height: 1.7;
+}
+
 .experience-link {
   display: inline-flex;
   align-items: center;
