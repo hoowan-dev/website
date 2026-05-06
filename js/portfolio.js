@@ -8,11 +8,29 @@ document.addEventListener('DOMContentLoaded', function () {
   const modalImage = modal.querySelector('.project-modal-image');
   const closeButtons = modal.querySelectorAll('[data-modal-close], .project-modal-close');
 
-  function openModal(card, href) {
+  async function openModal(card, href) {
     const title = card.querySelector('h3').innerText;
     const subtitle = card.querySelector('.item-subtitle').innerText;
     const date = card.querySelector('.item-header span').innerText;
-    const description = card.querySelector(':scope > p')?.textContent || '';
+    
+    const detailsElement = card.querySelector('.experience-details');
+    let description = detailsElement?.innerHTML || '';
+
+    // If the element has an external content URL, fetch it
+    const contentUrl = detailsElement?.getAttribute('data-content-url');
+    if (contentUrl) {
+      modalDescription.innerHTML = '<p>Loading content...</p>';
+      try {
+        const response = await fetch(contentUrl);
+        if (response.ok) {
+          description = await response.text();
+        } else {
+          description = '<p>Error: Could not load the external content.</p>';
+        }
+      } catch (error) {
+        description = '<p>Error: A network error occurred while loading content.</p>';
+      }
+    }
 
     const cardImage = card.querySelector('.project-image');
     if (cardImage) {
@@ -26,11 +44,17 @@ document.addEventListener('DOMContentLoaded', function () {
     modalTitle.textContent = title;
     modalSubtitle.textContent = subtitle;
     modalDate.textContent = date;
-    modalDescription.textContent = description;
-    modalLink.href = href || '#';
+    modalDescription.innerHTML = description;
+    if (modalLink) {
+      if (href && href !== '#') {
+        modalLink.href = href;
+        modalLink.parentElement.style.display = 'flex';
+      } else {
+        modalLink.parentElement.style.display = 'none';
+      }
+    }
     modal.classList.add('open');
     modal.setAttribute('aria-hidden', 'false');
-    modalLink.focus();
   }
 
   function closeModal() {
@@ -39,11 +63,11 @@ document.addEventListener('DOMContentLoaded', function () {
   }
 
   document.querySelectorAll('.experience-card .project-image, .experience-card .item-header h3 a').forEach(function (element) {
-    element.addEventListener('click', function (event) {
+    element.addEventListener('click', async function (event) {
       event.preventDefault();
       const card = event.target.closest('.experience-card');
       const link = card.querySelector('.item-header h3 a');
-      openModal(card, link ? link.href : '#');
+      await openModal(card, link ? link.getAttribute('href') : '#');
     });
   });
 

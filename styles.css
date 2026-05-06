@@ -52,7 +52,6 @@ svg {
   font-weight: 800;
   letter-spacing: -0.04em;
   font-size: 1.15rem;
-  text-transform: lowercase;
 }
 
 .site-nav {
@@ -104,7 +103,7 @@ svg {
   letter-spacing: 0.3em;
   font-size: 0.78rem;
   font-weight: 700;
-  color: #94a3b8;
+  color: #7c3aed;
 }
 
 .hero-panel h1 {
@@ -306,6 +305,29 @@ svg {
   display: none;
 }
 
+.experience-link {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.5rem 1rem;
+  border-radius: 999px;
+  background: rgba(124, 58, 237, 0.1);
+  border: 1px solid rgba(124, 58, 237, 0.3);
+  color: #f8fafc;
+  font-weight: 600;
+  font-size: 0.85rem;
+  text-decoration: none;
+  transition: all 0.2s ease;
+  width: fit-content;
+  margin-top: 0.5rem;
+  cursor: pointer;
+}
+
+.experience-link:hover {
+  background: rgba(124, 58, 237, 0.2);
+  border-color: rgba(124, 58, 237, 0.6);
+}
+
 .project-image {
   width: 100%;
   height: auto;
@@ -437,13 +459,6 @@ svg {
 .item-subtitle {
   margin: 0.35rem 0 0;
   color: #cbd5e1;
-}
-
-.experience-card span,
-.education-card span {
-  color: #a78bfa;
-  font-weight: 600;
-  font-size: 0.95rem;
 }
 
 .education-card {
