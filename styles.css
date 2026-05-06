@@ -51,13 +51,19 @@ svg {
   color: #f8fafc;
   font-weight: 800;
   letter-spacing: -0.04em;
-  font-size: 1.15rem;
+  font-size: 1.25rem;
+  transition: transform 0.2s ease, color 0.2s ease;
+}
+
+.logo:hover {
+  transform: scale(1.05);
+  color: #a78bfa;
 }
 
 .site-nav {
   display: flex;
   flex-wrap: wrap;
-  gap: 1rem;
+  gap: 0.5rem;
 }
 
 .site-nav a,
@@ -65,13 +71,18 @@ svg {
   color: #cbd5e1;
   text-decoration: none;
   font-size: 0.95rem;
+  font-weight: 600;
+  padding: 0.5rem 0.85rem;
+  border-radius: 0.6rem;
+  transition: all 0.2s ease;
 }
 
 .site-nav a:hover,
 .sidebar-nav a:hover,
 .hero-stack a:hover,
 .sidebar-card a:hover {
-  color: #7c3aed;
+  color: #f8fafc;
+  background: rgba(124, 58, 237, 0.15);
 }
 
 .hero-layout {

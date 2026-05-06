@@ -4,7 +4,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
   if (header) {
     header.innerHTML = `
-      <a class="logo" href="index.html">Juan Becerra</a>
+      <a class="logo" href="index.html">hoowan</a>
       <nav class="site-nav" aria-label="Primary">
         <a href="index.html#top">About</a>
         <a href="index.html#skills">Skills</a>
