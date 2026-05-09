@@ -13,6 +13,7 @@
 
 html {
   scroll-behavior: smooth;
+  scroll-padding-top: 8rem;
 }
 
 body {
@@ -41,6 +42,8 @@ svg {
   justify-content: space-between;
   align-items: center;
   gap: 1.5rem;
+  flex-wrap: wrap;
+  transition: padding 0.3s ease, gap 0.3s ease;
   padding: 1.25rem 1.75rem;
   margin-bottom: 1.5rem;
   position: sticky;
@@ -66,6 +69,42 @@ svg {
 .logo:hover {
   transform: scale(1.05);
   color: #a78bfa;
+}
+
+.header-toggle {
+  display: none;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(148,163,184,0.14);
+  color: #f8fafc;
+  border-radius: 0.5rem;
+  padding: 0.4rem;
+  cursor: pointer;
+  align-items: center;
+  justify-content: center;
+  transition: background 0.2s;
+}
+
+.header-toggle:hover {
+  background: rgba(255, 255, 255, 0.15);
+}
+
+.site-header.scrolled:not(.expanded) {
+  padding: 0.75rem 1.75rem;
+  gap: 0;
+}
+
+.site-header.scrolled:not(.expanded) .site-nav {
+  display: none;
+}
+
+.site-header.scrolled .header-toggle {
+  display: flex;
+}
+
+.site-header.expanded .site-nav {
+  width: 100%;
+  justify-content: center;
+  margin-top: 0.5rem;
 }
 
 .site-nav {
@@ -562,16 +601,23 @@ a {
   }
 
   .site-header {
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
+    justify-content: center;
     gap: 1.25rem;
     padding: 1.5rem;
+  }
+
+  .site-header.scrolled {
+    justify-content: space-between;
+  }
+
+  .site-header.scrolled:not(.expanded) {
+    padding: 0.75rem 1.25rem;
   }
 
   .site-nav {
     justify-content: center;
     gap: 0.35rem;
+    width: 100%;
   }
 
   .site-nav a {
