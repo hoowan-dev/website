@@ -34,12 +34,24 @@ document.addEventListener('DOMContentLoaded', () => {
       });
     });
 
+    // Create a placeholder element to prevent layout shift when header becomes fixed
+    const headerPlaceholder = document.createElement('div');
+    headerPlaceholder.style.display = 'none';
+    header.parentNode.insertBefore(headerPlaceholder, header);
+
     window.addEventListener('scroll', () => {
       if (window.scrollY > 60) {
-        header.classList.add('scrolled');
+        if (!header.classList.contains('scrolled')) {
+          headerPlaceholder.style.height = `${header.offsetHeight}px`;
+          headerPlaceholder.style.display = 'block';
+          header.classList.add('scrolled');
+        }
       } else {
-        header.classList.remove('scrolled', 'expanded');
-        toggleBtn.setAttribute('aria-expanded', 'false');
+        if (header.classList.contains('scrolled') || header.classList.contains('expanded')) {
+          headerPlaceholder.style.display = 'none';
+          header.classList.remove('scrolled', 'expanded');
+          toggleBtn.setAttribute('aria-expanded', 'false');
+        }
       }
     });
   }
