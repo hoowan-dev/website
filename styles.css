@@ -673,6 +673,8 @@ a {
 
   .site-nav {
     justify-content: center;
+    flex-direction: column;
+    align-items: center;
     gap: 0.35rem;
     width: 100%;
   }
