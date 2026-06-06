@@ -231,6 +231,8 @@ svg {
 
 .profile-image {
   width: 100%;
+  max-width: 500px;
+  justify-self: center;
   border-radius: 1.5rem;
   aspect-ratio: 1;
   object-fit: cover;
@@ -407,7 +409,9 @@ svg {
 }
 
 .resume-link {
-  display: inline-flex;
+  display: flex;
+  width: fit-content;
+  margin: 0 auto 1.5rem;
   align-items: center;
   justify-content: center;
   padding: 0.85rem 1.25rem;
