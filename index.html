@@ -7,13 +7,6 @@
   <meta name="description" content="Resume website for Juan Becerra, software engineer and game developer." />
   <link rel="stylesheet" href="styles.css" />
   <link rel="icon" type="image/x-icon" href="favicon.ico" />
-  <style>
-    .eyebrow {
-      font-size: 1.1rem;
-      font-weight: bold;
-      letter-spacing: 0.05em;
-    }
-  </style>
   <script src="js/components.js" defer></script>
 </head>
 <body id="top">
@@ -35,10 +28,22 @@
           He enjoys doing session work for recording artists and playing live shows, and has experience in music production. 
           That probably won't help much on the job, but please consider this when looking for a personality hire.
         </p>
-        
+
+        <div class="hero-actions">
+          <button type="button" class="primary-btn" onclick="window.open('files/Resume.pdf', '_blank', 'noopener')">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline points="7 10 12 15 17 10"></polyline><line x1="12" y1="15" x2="12" y2="3"></line></svg>
+            Resume (PDF)
+          </button>
+          <a href="portfolio.html" class="secondary-btn">View Portfolio &rarr;</a>
+        </div>
       </section>
 
-      <aside class="sidebar" style="position: static;">        <section class="sidebar-card">
+      <aside class="sidebar">
+        <div class="profile-card">
+          <img src="media/index/profile.jpg" alt="Juan Becerra" class="profile-image" />
+        </div>
+
+        <section class="sidebar-card">
           <h2>Contact</h2>
           <p>Seattle, WA</p>
           <p><a href="tel:+12085509191">208-550-9191</a></p>
@@ -54,15 +59,9 @@
           <p><a href="https://www.instagram.com/numerohoowan/" target="_blank" rel="noreferrer noopener">Instagram</a></p>
           <p><a href="https://www.facebook.com/thatguyjuan/" target="_blank" rel="noreferrer noopener">Facebook</a></p>
           <p><a href="https://linktr.ee/jamnlikedamn" target="_blank" rel="noreferrer noopener">JAMN (Band Linktree)</a></p>
-        
         </section>
-
       </aside>
     </main>
-
-    <img src="media/index/profile.jpg" alt="Juan Becerra" class="profile-image" />
-    <p></p>
-    <button type="button" class="resume-link" onclick="window.open('files/Resume.pdf', '_blank', 'noopener')">Resume (PDF)</button>
 
     <section id="skills" class="section">
       <div class="section-inner">
@@ -70,39 +69,83 @@
         <div class="skill-grid">
           <div class="skill-card">
             <h3>Programming Languages</h3>
-            <p>C/C++, Python, Rust, C#, Java, JavaScript, SQL</p>
+            <div class="skill-tags">
+              <span class="skill-tag">C/C++</span>
+              <span class="skill-tag">Python</span>
+              <span class="skill-tag">Rust</span>
+              <span class="skill-tag">C#</span>
+              <span class="skill-tag">Java</span>
+              <span class="skill-tag">JavaScript</span>
+              <span class="skill-tag">SQL</span>
+            </div>
           </div>
           <div class="skill-card">
             <h3>Game Development Engines</h3>
-            <p>Unreal Engine, Unity, Godot</p>
+            <div class="skill-tags">
+              <span class="skill-tag">Unreal Engine</span>
+              <span class="skill-tag">Unity</span>
+              <span class="skill-tag">Godot</span>
+            </div>
           </div>
           <div class="skill-card">
             <h3>Game Development Tools</h3>
-            <p>Maya, Blender, 3ds Max, Wwise, FMOD, Cascadeur</p>
+            <div class="skill-tags">
+              <span class="skill-tag">Maya</span>
+              <span class="skill-tag">Blender</span>
+              <span class="skill-tag">3ds Max</span>
+              <span class="skill-tag">Wwise</span>
+              <span class="skill-tag">FMOD</span>
+              <span class="skill-tag">Cascadeur</span>
+            </div>
           </div>
           <div class="skill-card">
             <h3>Graphics Programming</h3>
-            <p>Vulkan, Direct3D, OpenGL, GLSL/HLSL</p>
+            <div class="skill-tags">
+              <span class="skill-tag">Vulkan</span>
+              <span class="skill-tag">Direct3D</span>
+              <span class="skill-tag">OpenGL</span>
+              <span class="skill-tag">GLSL/HLSL</span>
+            </div>
           </div>
           <div class="skill-card">
             <h3>Database Management</h3>
-            <p>MySQL, PostgreSQL</p>
+            <div class="skill-tags">
+              <span class="skill-tag">MySQL</span>
+              <span class="skill-tag">PostgreSQL</span>
+            </div>
           </div>
           <div class="skill-card">
             <h3>Cloud & CI/CD</h3>
-            <p>AWS, Google Cloud, Docker Build Cloud, Git, Perforce, Jenkins</p>
+            <div class="skill-tags">
+              <span class="skill-tag">AWS</span>
+              <span class="skill-tag">Google Cloud</span>
+              <span class="skill-tag">Docker</span>
+              <span class="skill-tag">Git</span>
+              <span class="skill-tag">Perforce</span>
+              <span class="skill-tag">Jenkins</span>
+            </div>
           </div>
           <div class="skill-card">
             <h3>Project Management</h3>
-            <p>JIRA, Confluence, Trello, Agile/Scrum/Waterfall</p>
+            <div class="skill-tags">
+              <span class="skill-tag">JIRA</span>
+              <span class="skill-tag">Confluence</span>
+              <span class="skill-tag">Trello</span>
+              <span class="skill-tag">Agile / Scrum</span>
+            </div>
           </div>
           <div class="skill-card">
             <h3>Music Performance</h3>
-            <p>Like 1/3 of a Bachelor of Music, Really Good at Bass, Cracked Copy of Ableton</p>
+            <div class="skill-tags">
+              <span class="skill-tag">~1/3 Bachelor of Music</span>
+              <span class="skill-tag">Bass Guitar</span>
+              <span class="skill-tag">Session Musician</span>
+              <span class="skill-tag">Cracked Copy of Ableton</span>
+            </div>
           </div>
           <div class="skill-card">
             <h3>Personality Hire</h3>
-            <p>Sense of humor that can't be replicated with 1000 data centers</p>
+            <p>Sense of humor that can't be replicated with 1,000 data centers.</p>
           </div>
         </div>
       </div>

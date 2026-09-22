@@ -23,6 +23,23 @@ document.addEventListener('DOMContentLoaded', () => {
     `;
 
     const toggleBtn = header.querySelector('.header-toggle');
+    const navLinks = header.querySelectorAll('.site-nav a');
+    const currentPath = window.location.pathname.split('/').pop() || 'index.html';
+    const isHomePage = currentPath === '' || currentPath === 'index.html';
+
+    // Highlight active navigation link based on current URL
+    navLinks.forEach(link => {
+      const linkHref = link.getAttribute('href');
+      if (isHomePage) {
+        if (linkHref === 'index.html#top' && (!window.location.hash || window.location.hash === '#top' || window.location.hash === '#about')) {
+          link.classList.add('active');
+        } else if (window.location.hash && linkHref === `index.html${window.location.hash}`) {
+          link.classList.add('active');
+        }
+      } else if (linkHref === currentPath) {
+        link.classList.add('active');
+      }
+    });
     
     toggleBtn.addEventListener('click', () => {
       const isExpanded = header.classList.toggle('expanded');
@@ -30,10 +47,14 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
     // Automatically close the expanded menu if a navigation link is clicked
-    header.querySelectorAll('.site-nav a').forEach(link => {
+    navLinks.forEach(link => {
       link.addEventListener('click', () => {
         header.classList.remove('expanded');
         toggleBtn.setAttribute('aria-expanded', 'false');
+        if (isHomePage && link.getAttribute('href').startsWith('index.html#')) {
+          navLinks.forEach(l => l.classList.remove('active'));
+          link.classList.add('active');
+        }
       });
     });
 
