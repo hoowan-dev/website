@@ -45,12 +45,26 @@ document.addEventListener('DOMContentLoaded', function () {
     modalSubtitle.textContent = subtitle;
     modalDate.textContent = date;
     modalDescription.innerHTML = description;
-    if (modalLink) {
-      if (href && href !== '#') {
-        modalLink.href = href;
-        modalLink.parentElement.style.display = 'flex';
+    const modalActions = modal.querySelector('.project-modal-actions');
+    if (modalActions) {
+      const cardLinks = card.querySelectorAll('.experience-link');
+      if (cardLinks.length > 0) {
+        modalActions.innerHTML = '';
+        cardLinks.forEach(link => {
+          const actionLink = document.createElement('a');
+          actionLink.className = 'project-modal-link';
+          actionLink.href = link.href;
+          actionLink.target = '_blank';
+          actionLink.rel = 'noopener noreferrer';
+          actionLink.textContent = link.textContent;
+          modalActions.appendChild(actionLink);
+        });
+        modalActions.style.display = 'flex';
+      } else if (href && href !== '#') {
+        modalActions.innerHTML = `<a class="project-modal-link" href="${href}" target="_blank" rel="noopener noreferrer">View project page</a>`;
+        modalActions.style.display = 'flex';
       } else {
-        modalLink.parentElement.style.display = 'none';
+        modalActions.style.display = 'none';
       }
     }
     modal.classList.add('open');

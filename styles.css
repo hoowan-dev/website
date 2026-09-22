@@ -411,6 +411,18 @@ svg {
   border-color: rgba(220, 38, 38, 0.6);
 }
 
+.experience-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  align-items: center;
+  margin-top: 0.5rem;
+}
+
+.experience-actions .experience-link {
+  margin-top: 0;
+}
+
 .resume-link {
   display: flex;
   width: fit-content;
