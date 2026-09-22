@@ -5,11 +5,12 @@ document.addEventListener('DOMContentLoaded', () => {
   if (header) {
     header.innerHTML = `
       <a class="logo" href="index.html">
-        <img src="favicon.ico" alt="" width="24" height="24" aria-hidden="true">
-        hoowan
+        <img src="favicon.ico" alt="" width="22" height="22" aria-hidden="true">
+        <span>hoowan</span>
       </a>
       <button class="header-toggle" aria-label="Toggle navigation" aria-expanded="false">
-        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="18" x2="21" y2="18"></line></svg>
+        <svg class="icon-menu" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="18" x2="21" y2="18"></line></svg>
+        <svg class="icon-close" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
       </button>
       <nav class="site-nav" aria-label="Primary">
         <a href="index.html#top">About</a>
@@ -41,12 +42,13 @@ document.addEventListener('DOMContentLoaded', () => {
       }
     });
     
-    toggleBtn.addEventListener('click', () => {
+    toggleBtn.addEventListener('click', (e) => {
+      e.stopPropagation();
       const isExpanded = header.classList.toggle('expanded');
       toggleBtn.setAttribute('aria-expanded', isExpanded);
     });
 
-    // Automatically close the expanded menu if a navigation link is clicked
+    // Automatically close mobile menu if a link is clicked
     navLinks.forEach(link => {
       link.addEventListener('click', () => {
         header.classList.remove('expanded');
@@ -58,26 +60,30 @@ document.addEventListener('DOMContentLoaded', () => {
       });
     });
 
-    // Create a placeholder element to prevent layout shift when header becomes fixed
-    const headerPlaceholder = document.createElement('div');
-    headerPlaceholder.style.display = 'none';
-    header.parentNode.insertBefore(headerPlaceholder, header);
-
-    window.addEventListener('scroll', () => {
-      if (window.scrollY > 60) {
-        if (!header.classList.contains('scrolled')) {
-          headerPlaceholder.style.height = `${header.offsetHeight}px`;
-          headerPlaceholder.style.display = 'block';
-          header.classList.add('scrolled');
-        }
-      } else {
-        if (header.classList.contains('scrolled') || header.classList.contains('expanded')) {
-          headerPlaceholder.style.display = 'none';
-          header.classList.remove('scrolled', 'expanded');
-          toggleBtn.setAttribute('aria-expanded', 'false');
-        }
+    // Close mobile menu when clicking outside
+    document.addEventListener('click', (e) => {
+      if (!header.contains(e.target) && header.classList.contains('expanded')) {
+        header.classList.remove('expanded');
+        toggleBtn.setAttribute('aria-expanded', 'false');
       }
     });
+
+    // Close on Escape key
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape' && header.classList.contains('expanded')) {
+        header.classList.remove('expanded');
+        toggleBtn.setAttribute('aria-expanded', 'false');
+      }
+    });
+
+    // Smooth scroll indicator on sticky bar
+    window.addEventListener('scroll', () => {
+      if (window.scrollY > 20) {
+        header.classList.add('scrolled');
+      } else {
+        header.classList.remove('scrolled');
+      }
+    }, { passive: true });
   }
 
   if (footer) {

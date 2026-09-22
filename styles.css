@@ -64,37 +64,50 @@ svg {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  gap: 1.5rem;
-  flex-wrap: wrap;
-  transition: padding 0.3s ease, gap 0.3s ease;
-  padding: 1.25rem 1.75rem;
-  margin-bottom: 1.5rem;
+  gap: 1.25rem;
+  padding: 0.55rem 1.25rem;
+  margin-bottom: 2rem;
   position: sticky;
-  top: 1rem;
+  top: 0.75rem;
   z-index: 1000;
-  border-radius: 1.5rem;
-  background: rgba(255, 255, 255, 0.05);
-  backdrop-filter: blur(12px);
-  -webkit-backdrop-filter: blur(12px);
+  border-radius: 999px;
+  background: rgba(8, 10, 18, 0.75);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
   border: 1px solid var(--border-subtle);
-  box-shadow: 0 28px 65px rgba(15, 23, 42, 0.22);
+  box-shadow: 0 10px 30px -10px rgba(0, 0, 0, 0.5);
+  transition: background-color 0.25s ease, border-color 0.25s ease, box-shadow 0.25s ease, padding 0.25s ease;
+}
+
+.site-header.scrolled {
+  background: rgba(6, 8, 15, 0.92);
+  border-color: rgba(255, 255, 255, 0.12);
+  box-shadow: 0 16px 40px -10px rgba(0, 0, 0, 0.7), 0 0 20px -5px var(--accent-glow);
+  padding: 0.45rem 1.25rem;
 }
 
 .logo {
   display: flex;
   align-items: center;
-  gap: 0.5rem;
+  gap: 0.55rem;
   text-decoration: none;
   color: var(--text-secondary);
-  font-weight: 800;
-  letter-spacing: -0.04em;
-  font-size: 1.25rem;
-  transition: transform 0.2s ease, color 0.2s ease;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  font-size: 1.05rem;
+  padding: 0.2rem 0.4rem;
+  border-radius: 999px;
+  transition: color 0.2s ease;
 }
 
 .logo:hover {
-  transform: scale(1.05);
   color: var(--accent-light);
+}
+
+.logo img {
+  width: 22px;
+  height: 22px;
+  border-radius: 999px;
 }
 
 .header-toggle {
@@ -102,53 +115,48 @@ svg {
   background: rgba(255, 255, 255, 0.05);
   border: 1px solid var(--border-subtle);
   color: var(--text-secondary);
-  border-radius: 0.5rem;
-  padding: 0.4rem;
+  border-radius: 0.6rem;
+  padding: 0.45rem;
   cursor: pointer;
   align-items: center;
   justify-content: center;
-  transition: background 0.2s;
+  transition: all 0.2s ease;
 }
 
 .header-toggle:hover {
-  background: rgba(255, 255, 255, 0.15);
+  background: rgba(255, 255, 255, 0.12);
+  border-color: rgba(255, 255, 255, 0.2);
 }
 
-.site-header.scrolled:not(.expanded) {
-  padding: 0.75rem 1.75rem;
-  gap: 0;
-}
-
-.site-header.scrolled:not(.expanded) .site-nav {
+.header-toggle .icon-close {
   display: none;
 }
 
-.site-header.scrolled .header-toggle {
-  display: flex;
+.site-header.expanded .header-toggle .icon-menu {
+  display: none;
 }
 
-.site-header.expanded .site-nav {
-  width: 100%;
-  justify-content: center;
-  margin-top: 0.5rem;
+.site-header.expanded .header-toggle .icon-close {
+  display: block;
 }
 
 .site-nav {
   display: flex;
-  flex-wrap: wrap;
-  gap: 0.5rem;
+  align-items: center;
+  gap: 0.25rem;
 }
 
 .site-nav a,
 .sidebar-nav a {
   color: var(--text-muted);
   text-decoration: none;
-  font-size: 0.95rem;
-  font-weight: 600;
-  padding: 0.5rem 0.85rem;
-  border-radius: 0.6rem;
+  font-size: 0.88rem;
+  font-weight: 500;
+  padding: 0.35rem 0.8rem;
+  border-radius: 999px;
   border: 1px solid transparent;
   transition: all 0.2s ease;
+  white-space: nowrap;
 }
 
 .site-nav a:hover,
@@ -156,14 +164,14 @@ svg {
 .hero-stack a:hover,
 .sidebar-card a:hover {
   color: #ffffff;
-  background: rgba(220, 38, 38, 0.15);
-  border-color: rgba(220, 38, 38, 0.3);
+  background: rgba(255, 255, 255, 0.08);
 }
 
 .site-nav a.active {
   color: #ffffff;
-  background: rgba(220, 38, 38, 0.2);
+  background: rgba(220, 38, 38, 0.16);
   border-color: rgba(220, 38, 38, 0.4);
+  font-weight: 600;
 }
 
 /* ==========================================================================
@@ -195,6 +203,7 @@ svg {
 
 .eyebrow {
   display: inline-flex;
+  flex-wrap: wrap;
   align-items: center;
   margin: 0;
   text-transform: uppercase;
@@ -827,36 +836,79 @@ a {
   }
 }
 
-@media (max-width: 720px) {
+@media (max-width: 768px) {
   .page-shell {
     width: min(100%, calc(100% - 1.5rem));
   }
 
   .site-header {
-    justify-content: center;
-    gap: 1.25rem;
-    padding: 1.5rem;
+    border-radius: 1rem;
+    padding: 0.6rem 1rem;
+    position: sticky;
+    top: 0.5rem;
+    margin: 0.5rem auto 1.5rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
   }
 
   .site-header.scrolled {
-    justify-content: space-between;
+    padding: 0.5rem 1rem;
   }
 
-  .site-header.scrolled:not(.expanded) {
-    padding: 0.75rem 1.25rem;
+  .header-toggle {
+    display: flex !important;
   }
 
   .site-nav {
-    justify-content: center;
+    position: absolute;
+    top: calc(100% + 0.5rem);
+    left: 0;
+    right: 0;
+    background: rgba(10, 12, 22, 0.98);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 1rem;
+    padding: 0.75rem;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.6), 0 0 20px -5px var(--accent-glow);
+    display: flex;
     flex-direction: column;
-    align-items: center;
     gap: 0.35rem;
-    width: 100%;
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(-8px);
+    pointer-events: none;
+    transition: opacity 0.2s ease, transform 0.2s ease, visibility 0.2s ease;
+  }
+
+  .site-header.expanded .site-nav {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+    pointer-events: auto;
   }
 
   .site-nav a {
-    font-size: 0.85rem;
-    padding: 0.4rem 0.65rem;
+    font-size: 0.92rem;
+    padding: 0.65rem 1rem;
+    border-radius: 0.6rem;
+    width: 100%;
+    text-align: left;
+  }
+
+  .site-nav a:hover {
+    background: rgba(220, 38, 38, 0.15);
+  }
+
+  .site-nav a.active {
+    background: rgba(220, 38, 38, 0.22);
+    border-color: rgba(220, 38, 38, 0.4);
+  }
+
+  .eyebrow {
+    font-size: 0.78rem;
+    letter-spacing: 0.08em;
   }
 
   .hero-panel h1 {
