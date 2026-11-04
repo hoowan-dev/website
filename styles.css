@@ -466,6 +466,7 @@ svg {
 
 .cert-card {
   display: grid;
+  align-content: start;
   gap: 1rem;
 }
 
