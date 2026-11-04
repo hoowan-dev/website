@@ -25,6 +25,28 @@
         <div class="skill-grid">
 
           <article class="experience-card">
+            <img src="media/portfolio/resume.png" alt="Juan Becerra's resume, showing the name header and experience section" class="project-image">
+            <div class="item-header">
+              <div>
+                <h3><a href="https://github.com/hoowan-dev/resume">Resume Pipeline</a></h3>
+                <p class="item-subtitle">My resume as code, plus a job-targeting pipeline written in LaTeX, Python, and PowerShell</p>
+              </div>
+              <span>November 2026</span>
+            </div>
+            <div class="experience-details">Yes, my resume has a repository. The base resume is a single-page LaTeX document compiled to PDF with Tectonic, which means no heavyweight TeX install and version control for every rewording. On top of that sits a Python pipeline that takes a job posting link or a saved text file, cleans up the posting, and asks Claude to write a tailored resume and cover letter from a master skills inventory. Each document is then compiled and, if it errors or spills past one page, sent back for repairs. Since job postings are untrusted web content, Claude runs with every tool disabled and can only return text, while Tectonic compiles in its untrusted mode. PowerShell scripts handle builds and batches of links, and a failed link doesn't stop the rest.</div>
+            <div class="experience-actions">
+              <a href="https://github.com/hoowan-dev/resume/blob/main/out/resume.pdf" class="experience-link primary" target="_blank" rel="noopener noreferrer">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="8" y1="13" x2="16" y2="13"></line><line x1="8" y1="17" x2="16" y2="17"></line></svg>
+                <span>View PDF</span>
+              </a>
+              <a href="https://github.com/hoowan-dev/resume" class="experience-link" target="_blank" rel="noopener noreferrer">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg>
+                <span>View Project</span>
+              </a>
+            </div>
+          </article>
+
+          <article class="experience-card">
             <img src="media/portfolio/doomslop.png" alt="DoomSlop" class="project-image">
             <div class="item-header">
               <div>
