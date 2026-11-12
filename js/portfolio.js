@@ -84,10 +84,19 @@ document.addEventListener('DOMContentLoaded', function () {
     modal.setAttribute('aria-hidden', 'true');
   }
 
-  document.querySelectorAll('.experience-card .project-image, .experience-card .item-header h3 a').forEach(function (element) {
-    element.addEventListener('click', async function (event) {
+  document.querySelectorAll('.experience-card').forEach(function (card) {
+    card.classList.add('is-clickable');
+    card.addEventListener('click', async function (event) {
+      // Action buttons (View Project, Play Demo, etc.) keep their normal link behavior
+      if (event.target.closest('.experience-actions a')) {
+        return;
+      }
+      // Don't hijack a click that finishes a text selection
+      const selection = window.getSelection();
+      if (selection && selection.toString().trim() !== '' && card.contains(selection.anchorNode)) {
+        return;
+      }
       event.preventDefault();
-      const card = event.target.closest('.experience-card');
       const link = card.querySelector('.item-header h3 a');
       await openModal(card, link ? link.getAttribute('href') : '#');
     });

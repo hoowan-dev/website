@@ -326,12 +326,6 @@ svg {
   transition: border-color 0.25s ease, box-shadow 0.25s ease, transform 0.25s ease;
 }
 
-.profile-card:hover {
-  transform: translateY(-2px);
-  border-color: var(--border-hover);
-  box-shadow: 0 24px 50px -12px rgba(0, 0, 0, 0.5), 0 0 20px -5px var(--accent-glow);
-}
-
 .profile-image {
   width: 100%;
   height: auto;
@@ -347,11 +341,6 @@ svg {
   box-shadow: 0 20px 45px rgba(15, 23, 42, 0.2);
   padding: 1.75rem;
   transition: border-color 0.25s ease, box-shadow 0.25s ease;
-}
-
-.sidebar-card:hover {
-  border-color: var(--border-hover);
-  box-shadow: 0 24px 50px -12px rgba(0, 0, 0, 0.5), 0 0 20px -5px var(--accent-glow);
 }
 
 .sidebar-card h2 {
@@ -454,10 +443,8 @@ svg {
               background-color 0.25s ease;
 }
 
-.experience-card:hover,
-.skill-card:hover,
-.cert-card:hover,
-.education-card:hover {
+/* Only cards that actually do something on click (portfolio/blog modals) light up */
+.experience-card.is-clickable:hover {
   transform: translateY(-3px);
   border-color: var(--border-hover);
   box-shadow: 0 24px 50px -12px rgba(0, 0, 0, 0.5), 0 0 24px -6px var(--accent-glow);
@@ -512,18 +499,6 @@ svg {
   font-weight: 500;
   letter-spacing: 0.01em;
   transition: all 0.2s ease;
-}
-
-.skill-card:hover .skill-tag {
-  border-color: rgba(220, 38, 38, 0.35);
-  color: #f8fafc;
-}
-
-.skill-tag:hover {
-  background: rgba(220, 38, 38, 0.18);
-  border-color: var(--accent-light);
-  color: #ffffff;
-  transform: translateY(-1px);
 }
 
 .cert-list {
@@ -651,7 +626,11 @@ svg {
   transition: transform 0.25s ease, opacity 0.25s ease;
 }
 
-.experience-card:hover .project-image {
+.experience-card.is-clickable {
+  cursor: pointer;
+}
+
+.experience-card.is-clickable:hover .project-image {
   transform: scale(1.01);
   opacity: 0.96;
 }
