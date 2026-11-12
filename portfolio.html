@@ -20,26 +20,44 @@
       </section>
     </main>
 
-    <section class="section">
+    <section id="good-stuff" class="section">
       <div class="section-inner">
+        <div class="section-header">
+          <h2>The Good Stuff</h2>
+          <p>Game development projects that I'm particularly proud of 🎮🏆✨</p>
+        </div>
         <div class="skill-grid">
 
           <article class="experience-card">
-            <img src="media/portfolio/resume.png" alt="Juan Becerra's resume, showing the name header and experience section" class="project-image">
+            <img src="media/portfolio/protoboy.png" alt="ProtoBoy's pillar tree editor, with a Fellowship root node branching into Gameplay, Animation, Art, Audio, Content and UI pillars" class="project-image">
             <div class="item-header">
               <div>
-                <h3><a href="https://github.com/hoowan-dev/resume">Resume Pipeline</a></h3>
-                <p class="item-subtitle">My resume as code, plus a job-targeting pipeline written in LaTeX, Python, and PowerShell</p>
+                <h3><a href="https://github.com/hoowan-dev/protoboy">ProtoBoy</a></h3>
+                <p class="item-subtitle">Build games, not slop. An Unreal Engine 5.9 editor plugin that keeps AI coding agents on-architecture.</p>
               </div>
               <span>November 2026</span>
             </div>
-            <div class="experience-details">Yes, my resume has a repository. The base resume is a single-page LaTeX document compiled to PDF with Tectonic, which means no heavyweight TeX install and version control for every rewording. On top of that sits a Python pipeline that takes a job posting link or a saved text file, cleans up the posting, and asks Claude to write a tailored resume and cover letter from a master skills inventory. Each document is then compiled and, if it errors or spills past one page, sent back for repairs. Since job postings are untrusted web content, Claude runs with every tool disabled and can only return text, while Tectonic compiles in its untrusted mode. PowerShell scripts handle builds and batches of links, and a failed link doesn't stop the rest.</div>
+            <div class="experience-details">ProtoBoy is a game-dev prototyping companion that stops AI-assisted work from piling into one giant, aimless blob of code. It runs a local MCP server inside the Unreal Editor, with bearer-token auth and localhost only, so Claude Code, Claude Desktop, and Gemini CLI can read the project's architecture doc, design docs, ADRs, and task board before they write anything. Agents call tools like <code>get_project_context</code> and <code>locate_feature</code> to find which system should own new work, and a new system or a broken rule needs an ADR and a human's sign-off first. Docs sync to an Obsidian vault, tasks sync to a Trello board, and a Behavior Tree style pillar editor turns the game's architecture into a tree of linked design docs. Write tools are off by default, can ask before every change, and log everything, because an agent with write access should still ask nicely. It's an early 0.1 beta, with more engines and a standalone service on the roadmap.</div>
             <div class="experience-actions">
-              <a href="https://github.com/hoowan-dev/resume/blob/main/out/resume.pdf" class="experience-link primary" target="_blank" rel="noopener noreferrer">
-                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="8" y1="13" x2="16" y2="13"></line><line x1="8" y1="17" x2="16" y2="17"></line></svg>
-                <span>View PDF</span>
+              <a href="https://github.com/hoowan-dev/protoboy" class="experience-link" target="_blank" rel="noopener noreferrer">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg>
+                <span>View Project</span>
               </a>
-              <a href="https://github.com/hoowan-dev/resume" class="experience-link" target="_blank" rel="noopener noreferrer">
+            </div>
+          </article>
+
+          <article class="experience-card">
+            <img src="media/portfolio/fellowship.jpg" alt="A Fellowship character in knight armor climbing a tall wall with a sword and potions equipped, showing climbing IK debug markers, the equipment HUD and the event log" class="project-image">
+            <div class="item-header">
+              <div>
+                <h3><a href="https://github.com/hoowan-dev/Fellowship">Fellowship</a></h3>
+                <p class="item-subtitle">Third-person action RPG about the friends we made along the way, built in Unreal Engine 5.9 and C++</p>
+              </div>
+              <span>November 2026</span>
+            </div>
+            <div class="experience-details">Fellowship is a third-person action RPG prototype built around four pillars: metasystems, animation, gameplay, and (eventually) co-op multiplayer. The inventory is a spatial grid that lives inside the backpack you're wearing. Items take up multiple cells and rotate, and a dropped backpack keeps everything that was in it. Opening the inventory doesn't pause the game. Instead, your character holds the swaying backpack up in first person while the grid floats in front of it. Movement uses motion matching with Pose Search, and each weapon combination gets its own animation database, so sword-and-shield moves differently from a spear. A custom climbing mode follows walls and overhangs, with IK-planted hands and feet and a climbing gait. Combat has lock-on targeting with cinematic bars, and enemies are data-driven assets with pluggable behaviors. The first enemy is a walking cactus called the Prick. Rendering uses Lumen, hardware ray tracing, Virtual Shadow Maps, and Substrate materials, with automation tests for the core systems.</div>
+            <div class="experience-actions">
+              <a href="https://github.com/hoowan-dev/Fellowship" class="experience-link" target="_blank" rel="noopener noreferrer">
                 <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg>
                 <span>View Project</span>
               </a>
@@ -69,26 +87,6 @@
           </article>
 
           <article class="experience-card">
-            <img src="media/portfolio/jamn_sales_tracker.png" alt="JAMN Sales Tracker" class="project-image">
-            <div class="item-header">
-              <div>
-                <h3><a href="https://github.com/hoowan-dev/jamn_sales_tracker">JAMN Sales Tracker</a></h3>
-                <p class="item-subtitle">Sales tracker for my band, JAMN. Written in Python and Flask.</p>
-              </div>
-              <span>May 2026</span>
-            </div>
-            <div class="experience-details">The project integrates with multiple platforms—Square, Squarespace, and Venmo—to fetch transaction records. It
-  processes this data into a standardized format (categorizing items like t-shirt types and sizes), calculates net
-  earnings, and logs the results directly into a Google Sheet for centralized bookkeeping.</div>
-            <div class="experience-actions">
-              <a href="https://github.com/hoowan-dev/jamn_sales_tracker" class="experience-link" target="_blank" rel="noopener noreferrer">
-                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg>
-                <span>View Project</span>
-              </a>
-            </div>
-          </article>
-
-          <article class="experience-card">
             <img src="media/portfolio/broncodrome.png" alt="BroncoDrome" class="project-image">
             <div class="item-header">
               <div>
@@ -100,24 +98,6 @@
             <div class="experience-details">BroncoDrome is a 3rd-person vehicular combat game developed in Unreal 4, C++, and Blueprints. This was my group senior design project where we were tasked to design and develop a complex architecture project over the course of several months. In the end, our group was able to create the base of a driving game inspired by other vehicular combat games (namely DeathDrome and Mario Kart). Players drive around an arena inspired by Boise State’s Albertson’s Stadium, get pick-ups that temporarily boost stats, and fire a blaster at other enemy, AI controlled vehicles. Overall, the goal of the project was to develop a base for a game that future senior design groups can take over and add features to.</div>
             <div class="experience-actions">
               <a href="https://github.com/juanbecerra0/BroncoDrome" class="experience-link" target="_blank" rel="noopener noreferrer">
-                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg>
-                <span>View Project</span>
-              </a>
-            </div>
-          </article>
-
-          <article class="experience-card">
-            <img src="media/portfolio/commoncoop.png" alt="Common Co-op" class="project-image">
-            <div class="item-header">
-              <div>
-                <h3><a href="https://github.com/juanbecerra0/CommonCore">Common Co-op</a></h3>
-                <p class="item-subtitle">Math web-game developed in Unity, C#, and OpenGL</p>
-              </div>
-              <span>May 2021</span>
-            </div>
-            <div class="experience-details">Common co-op is a small common-core multiplication game developed in Unity and C# and ported to web browsers via WebGL. This was the final project for my Human-Computer Interaction course at Boise State, which is where we rapidly iterated on UI/UX features for our respective clients. In this game, 4th and 5th grade children drag and drop numbers onto a box-multiplication problem to complete the expression. They progress through increasingly challenging problems until they are given a final score based on their performance.</div>
-            <div class="experience-actions">
-              <a href="https://github.com/juanbecerra0/CommonCore" class="experience-link" target="_blank" rel="noopener noreferrer">
                 <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg>
                 <span>View Project</span>
               </a>
@@ -161,24 +141,6 @@
           </article>
 
           <article class="experience-card">
-            <img src="media/portfolio/fractal.png" alt="Fractal Image Generator" class="project-image">
-            <div class="item-header">
-              <div>
-                <h3><a href="https://github.com/juanbecerra0/FractalImageGenerator">Fractal Image Generator</a></h3>
-                <p class="item-subtitle">Mandelbrot image generator developed in C++</p>
-              </div>
-              <span>July 2020</span>
-            </div>
-            <div class="experience-details">This is a personal project I developed to practice more advanced concepts in C++. Given a target resolution, color range definitions, zoom operations, and an output file path, this program generates a fractal image using a computation-clamped Mandelbrot algorithm.</div>
-            <div class="experience-actions">
-              <a href="https://github.com/juanbecerra0/FractalImageGenerator" class="experience-link" target="_blank" rel="noopener noreferrer">
-                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg>
-                <span>View Project</span>
-              </a>
-            </div>
-          </article>
-
-          <article class="experience-card">
             <img src="media/portfolio/terrainEngine.PNG" alt="Terrain Engine" class="project-image">
             <div class="item-header">
               <div>
@@ -190,6 +152,96 @@
             <div class="experience-details">This is my procedural terrain generator built using Unity. In this project, I researched and implemented several fractal-based procedural terrain generation techniques for my Advanced Computer Graphics course at Boise State University. It features biome partitioning, which modifies geometry noise-space to match different biomes, blends different materials on prefab geometry blocks, and procedurally places models based on the biome. I've finished the first version of this project, and I hope to add more features in the future.</div>
             <div class="experience-actions">
               <a href="https://github.com/juanbecerra0/Volcanic-Terrain-Generator" class="experience-link" target="_blank" rel="noopener noreferrer">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg>
+                <span>View Project</span>
+              </a>
+            </div>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <section id="meh-stuff" class="section">
+      <div class="section-inner">
+        <div class="section-header">
+          <h2>The Meh Stuff</h2>
+          <p>The smaller/older/embarrassing codebases lol 🙈🍝💀</p>
+        </div>
+        <div class="skill-grid">
+
+          <article class="experience-card">
+            <img src="media/portfolio/resume.png" alt="Juan Becerra's resume, showing the name header and experience section" class="project-image">
+            <div class="item-header">
+              <div>
+                <h3><a href="https://github.com/hoowan-dev/resume">Resume Pipeline</a></h3>
+                <p class="item-subtitle">My resume as code, plus a job-targeting pipeline written in LaTeX, Python, and PowerShell</p>
+              </div>
+              <span>November 2026</span>
+            </div>
+            <div class="experience-details">Yes, my resume has a repository. The base resume is a single-page LaTeX document compiled to PDF with Tectonic, which means no heavyweight TeX install and version control for every rewording. On top of that sits a Python pipeline that takes a job posting link or a saved text file, cleans up the posting, and asks Claude to write a tailored resume and cover letter from a master skills inventory. Each document is then compiled and, if it errors or spills past one page, sent back for repairs. Since job postings are untrusted web content, Claude runs with every tool disabled and can only return text, while Tectonic compiles in its untrusted mode. PowerShell scripts handle builds and batches of links, and a failed link doesn't stop the rest.</div>
+            <div class="experience-actions">
+              <a href="https://github.com/hoowan-dev/resume/blob/main/out/resume.pdf" class="experience-link primary" target="_blank" rel="noopener noreferrer">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="8" y1="13" x2="16" y2="13"></line><line x1="8" y1="17" x2="16" y2="17"></line></svg>
+                <span>View PDF</span>
+              </a>
+              <a href="https://github.com/hoowan-dev/resume" class="experience-link" target="_blank" rel="noopener noreferrer">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg>
+                <span>View Project</span>
+              </a>
+            </div>
+          </article>
+
+          <article class="experience-card">
+            <img src="media/portfolio/jamn_sales_tracker.png" alt="JAMN Sales Tracker" class="project-image">
+            <div class="item-header">
+              <div>
+                <h3><a href="https://github.com/hoowan-dev/jamn_sales_tracker">JAMN Sales Tracker</a></h3>
+                <p class="item-subtitle">Sales tracker for my band, JAMN. Written in Python and Flask.</p>
+              </div>
+              <span>May 2026</span>
+            </div>
+            <div class="experience-details">The project integrates with multiple platforms—Square, Squarespace, and Venmo—to fetch transaction records. It
+  processes this data into a standardized format (categorizing items like t-shirt types and sizes), calculates net
+  earnings, and logs the results directly into a Google Sheet for centralized bookkeeping.</div>
+            <div class="experience-actions">
+              <a href="https://github.com/hoowan-dev/jamn_sales_tracker" class="experience-link" target="_blank" rel="noopener noreferrer">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg>
+                <span>View Project</span>
+              </a>
+            </div>
+          </article>
+
+          <article class="experience-card">
+            <img src="media/portfolio/commoncoop.png" alt="Common Co-op" class="project-image">
+            <div class="item-header">
+              <div>
+                <h3><a href="https://github.com/juanbecerra0/CommonCore">Common Co-op</a></h3>
+                <p class="item-subtitle">Math web-game developed in Unity, C#, and OpenGL</p>
+              </div>
+              <span>May 2021</span>
+            </div>
+            <div class="experience-details">Common co-op is a small common-core multiplication game developed in Unity and C# and ported to web browsers via WebGL. This was the final project for my Human-Computer Interaction course at Boise State, which is where we rapidly iterated on UI/UX features for our respective clients. In this game, 4th and 5th grade children drag and drop numbers onto a box-multiplication problem to complete the expression. They progress through increasingly challenging problems until they are given a final score based on their performance.</div>
+            <div class="experience-actions">
+              <a href="https://github.com/juanbecerra0/CommonCore" class="experience-link" target="_blank" rel="noopener noreferrer">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg>
+                <span>View Project</span>
+              </a>
+            </div>
+          </article>
+
+          <article class="experience-card">
+            <img src="media/portfolio/fractal.png" alt="Fractal Image Generator" class="project-image">
+            <div class="item-header">
+              <div>
+                <h3><a href="https://github.com/juanbecerra0/FractalImageGenerator">Fractal Image Generator</a></h3>
+                <p class="item-subtitle">Mandelbrot image generator developed in C++</p>
+              </div>
+              <span>July 2020</span>
+            </div>
+            <div class="experience-details">This is a personal project I developed to practice more advanced concepts in C++. Given a target resolution, color range definitions, zoom operations, and an output file path, this program generates a fractal image using a computation-clamped Mandelbrot algorithm.</div>
+            <div class="experience-actions">
+              <a href="https://github.com/juanbecerra0/FractalImageGenerator" class="experience-link" target="_blank" rel="noopener noreferrer">
                 <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg>
                 <span>View Project</span>
               </a>
@@ -339,6 +391,7 @@
               </a>
             </div>
           </article>
+
         </div>
       </div>
     </section>

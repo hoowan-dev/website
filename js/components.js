@@ -88,7 +88,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
   if (footer) {
     footer.innerHTML = `
-      <p>© ${new Date().getFullYear()} Juan Becerra. Built with hopes, dreams, and free coding assistant tokens.</p>
+      <p>© ${new Date().getFullYear()} Juan Becerra. Built with hopes, dreams, and #vibes.</p>
     `;
   }
 });
