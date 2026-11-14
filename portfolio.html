@@ -24,7 +24,7 @@
       <div class="section-inner">
         <div class="section-header">
           <h2>The Good Stuff</h2>
-          <p>Game development projects that I'm particularly proud of 🎮🏆✨</p>
+          <p>The projects that I'm particularly proud of 🎮🏆✨</p>
         </div>
         <div class="skill-grid">
 
@@ -165,8 +165,8 @@
     <section id="meh-stuff" class="section">
       <div class="section-inner">
         <div class="section-header">
-          <h2>The Meh Stuff</h2>
-          <p>The smaller/older/embarrassing codebases lol 🙈🍝💀</p>
+          <h2>The Mid Stuff</h2>
+          <p>The projects that most certainly exist 🙈🍝💀</p>
         </div>
         <div class="skill-grid">
 
@@ -186,6 +186,57 @@
                 <span>View PDF</span>
               </a>
               <a href="https://github.com/hoowan-dev/resume" class="experience-link" target="_blank" rel="noopener noreferrer">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg>
+                <span>View Project</span>
+              </a>
+            </div>
+          </article>
+
+          <article class="experience-card">
+            <div class="item-header">
+              <div>
+                <h3><a href="https://github.com/hoowan-dev/stream-deck">Stream Deck Plugins</a></h3>
+                <p class="item-subtitle">Custom Stream Deck plugins for my desk, written in Node.js on the Stream Deck SDK</p>
+              </div>
+              <span>November 2026</span>
+            </div>
+            <div class="experience-details">A collection of Stream Deck plugins that each draw their own key images. The Claude plugin shows my 5-hour and weekly Claude usage limits as color-coded progress bars, and it shares one cached response between keys and backs off on <code>429</code>s, because that endpoint rate-limits hard. The Topping plugin toggles monitoring and 48V phantom power on my audio interface by sending raw HID reports reverse-engineered from the vendor's control app, and it keeps up with changes made outside Stream Deck. The others switch my display between monitor and TV, open Windows Terminal running Claude Code, and drive Obsidian through a hidden PowerShell helper that focuses the window and sends hotkeys.</div>
+            <div class="experience-actions">
+              <a href="https://github.com/hoowan-dev/stream-deck" class="experience-link" target="_blank" rel="noopener noreferrer">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg>
+                <span>View Project</span>
+              </a>
+            </div>
+          </article>
+
+          <article class="experience-card">
+            <div class="item-header">
+              <div>
+                <h3><a href="https://github.com/hoowan-dev/icue">iCUE Widgets</a></h3>
+                <p class="item-subtitle">A hardware monitor widget for a Corsair XENEON EDGE, written in HTML, JavaScript, and Python</p>
+              </div>
+              <span>November 2026</span>
+            </div>
+            <div class="experience-details">A System Stats widget for the touchscreen under my monitor, built on Corsair's iCUE widget framework. It shows CPU, GPU, and RAM load and temperatures pulled straight from iCUE's sensors, with no extra monitoring software. It auto-detects which sensors to use, preferring a discrete GPU and showing the hotter RAM stick, and has a troubleshooting mode that lists every sensor iCUE reports. iCUE doesn't report RAM usage at all, so a small standard-library Python helper reads it from Windows and serves it on localhost, pushing an update every second.</div>
+            <div class="experience-actions">
+              <a href="https://github.com/hoowan-dev/icue" class="experience-link" target="_blank" rel="noopener noreferrer">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg>
+                <span>View Project</span>
+              </a>
+            </div>
+          </article>
+
+          <article class="experience-card">
+            <div class="item-header">
+              <div>
+                <h3><a href="https://github.com/hoowan-dev/neetcode-submissions">NeetCode Submissions</a></h3>
+                <p class="item-subtitle">118 data structures and algorithms problems and counting, mostly in Python</p>
+              </div>
+              <span>November 2026</span>
+            </div>
+            <div class="experience-details">Every solution I've submitted on NeetCode, synced to GitHub automatically, covering arrays and hashing, two pointers, sliding windows, binary search, linked lists, trees, graphs, heaps, intervals, backtracking, and dynamic programming. Each attempt is saved as its own file, and 47 problems have more than one, so you can watch the rewrites happen. Keeping the interview muscles warm, one two-sum at a time.</div>
+            <div class="experience-actions">
+              <a href="https://github.com/hoowan-dev/neetcode-submissions" class="experience-link" target="_blank" rel="noopener noreferrer">
                 <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg>
                 <span>View Project</span>
               </a>
