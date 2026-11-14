@@ -4,7 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Juan Becerra | Home</title>
-  <meta name="description" content="Resume website for Juan Becerra, software engineer and game developer." />
+  <meta name="description" content="Resume website for Juan Becerra, software engineer building gameplay, animation, and AI systems." />
   <link rel="stylesheet" href="styles.css" />
   <link rel="icon" type="image/x-icon" href="favicon.ico" />
   <script src="js/components.js" defer></script>
@@ -15,12 +15,13 @@
 
     <main class="hero-layout">
       <section class="hero-panel">
-        <p class="eyebrow">|  Software Engineer  |  Game Developer  |  Bad Web-Dev  |</p>
+        <p class="eyebrow">|  Software Engineer  |  Gameplay, Animation &amp; AI Systems  |  Bad Web-Dev  |</p>
         <h1>Juan Becerra</h1>
         <p class="hero-copy">
-          Juan Becerra is a software engineer and game developer with 5+ years of professional experience developing gameplay and simulation features, animation systems, tech-art pipelines, and designer tools for AAA video game franchises.
-          He holds a B.S. in Computer Science from Boise State University and has completed several certifications in game development, graphics programming, and software engineering. He is passionate about creating engaging gameplay experiences and game development tools, and is always eager to learn new technologies and techniques in the video games industry.
-          He is currently based in Seattle, WA and is open to remote, on-site, or hybrid opportunities in game development and software engineering.
+          Juan Becerra is a software engineer with 5+ years of AAA game development experience building gameplay, animation, tools, and AI systems at Electronic Arts.
+          His production tools have helped ship games and been adopted across multiple studios to speed up content creation, and lately he's been building at the intersection of game dev and AI: a retrieval-augmented generation (RAG) prototype for finding animations by style, mood, and posture, and <a href="portfolio.html">ProtoBoy</a>, an MCP server that grounds AI coding agents in a game's design docs.
+          He holds a B.S. in Computer Science from Boise State University and is taking graduate coursework in machine learning and deep learning at the University of Washington.
+          He is based in Seattle, WA and is open to remote, on-site, or hybrid roles in AI engineering, game development, and software engineering.
         </p>
 
         <p class="hero-copy">
@@ -62,6 +63,56 @@
       </aside>
     </main>
 
+    <section id="experience" class="section">
+      <div class="section-inner">
+        <h2>Experience</h2>
+        <article class="experience-card">
+          <div class="item-header">
+            <div>
+              <h3>Electronic Arts - Lifestyle</h3>
+              <p class="item-subtitle">Software Engineer (Tools and Tech-Art) · Kirkland, WA</p>
+            </div>
+            <span>2025 – Present</span>
+          </div>
+          <div class="item-description">
+            Architected a project-agnostic Maya/Python animation stylization tool with modular PySide/Qt UIs that uses existing animation databases to generate content for new projects. It's been adopted across multiple EA studios and cuts manual keyframing by over 70%.
+            Engineered a high-throughput Unreal Engine C++ plugin that exports runtime character trajectory, pose, and velocity data to populate motion-matching animation databases.
+            Prototyped a retrieval-augmented generation (RAG) system that retrieves animations by characteristics such as style, mood, and posture, using machine learning for automated asset tagging.
+          </div>
+        </article>
+
+        <article class="experience-card">
+          <div class="item-header">
+            <div>
+              <h3>Electronic Arts - Maxis Studios</h3>
+              <p class="item-subtitle">Software Engineer (Gameplay and Animation) · Seattle, WA (Remote)</p>
+            </div>
+            <span>2021 – 2025</span>
+          </div>
+          <div class="item-description">
+            Worked on the pre-production of Project Rene, an upcoming Sims experience built in Unreal Engine 5.
+            Architected a multithreaded asynchronous path-planning and navigation API in C++, enabling deterministic path following in multiplayer with real-time obstacle avoidance, held under a 1.5ms frame budget.
+            Implemented locomotion and animation runtime systems, including motion matching, distance matching, custom inverse kinematics (IK), and animation event systems.
+            Built in-editor tuning tools and visual debuggers for behavior trees and animation, used by designers and animators.
+            Profiled memory, compute, and frame budgets for dense crowd and multiplayer simulation, eliminating hitches in character evaluation graphs and spatial query sweeps.
+          </div>
+        </article>
+
+        <article class="experience-card">
+          <div class="item-header">
+            <div>
+              <h3>Lionbridge</h3>
+              <p class="item-subtitle">Senior Games Test Engineer · Boise, ID</p>
+            </div>
+            <span>2020 – 2021</span>
+          </div>
+          <div class="item-description">
+            Led a QA team testing live-service multiplayer AAA titles, writing engine-level bug diagnostics in JIRA and drawing on engine and gameplay programming knowledge to add insight to existing reports.
+          </div>
+        </article>
+      </div>
+    </section>
+
     <section id="skills" class="section">
       <div class="section-inner">
         <h2>Skills</h2>
@@ -81,6 +132,21 @@
               <span class="skill-tag">SQL</span>
               <span class="skill-tag">Bash</span>
               <span class="skill-tag">PowerShell</span>
+            </div>
+          </div>
+          <div class="skill-card">
+            <h3>AI &amp; Machine Learning</h3>
+            <div class="skill-tags">
+              <span class="skill-tag">LLMs</span>
+              <span class="skill-tag">AI Agents</span>
+              <span class="skill-tag">Model Context Protocol (MCP)</span>
+              <span class="skill-tag">RAG</span>
+              <span class="skill-tag">Prompt Engineering</span>
+              <span class="skill-tag">PyTorch</span>
+              <span class="skill-tag">ONNX Runtime</span>
+              <span class="skill-tag">GenAI / ML Content Tools</span>
+              <span class="skill-tag">ML Asset Tagging</span>
+              <span class="skill-tag">Classical AI &amp; Search</span>
             </div>
           </div>
           <div class="skill-card">
@@ -165,15 +231,6 @@
               <span class="skill-tag">Cascadeur</span>
               <span class="skill-tag">Wwise</span>
               <span class="skill-tag">FMOD</span>
-            </div>
-          </div>
-          <div class="skill-card">
-            <h3>Machine Learning</h3>
-            <div class="skill-tags">
-              <span class="skill-tag">PyTorch</span>
-              <span class="skill-tag">ONNX Runtime</span>
-              <span class="skill-tag">GenAI / ML Content Tools</span>
-              <span class="skill-tag">Classical AI &amp; Search</span>
             </div>
           </div>
           <div class="skill-card">
@@ -268,7 +325,7 @@
           <div class="item-header">
             <div>
               <h3>University of Washington - Continuing Education</h3>
-              <div class="item-subtitle">Graduate Coursework (Non-Degree) · Seattle, WA</div>
+              <div class="item-subtitle">Graduate Coursework in Machine Learning &amp; Deep Learning (Non-Degree, In Progress) · Seattle, WA</div>
             </div>
             <span>2026 – Present</span>
           </div>
@@ -304,137 +361,6 @@
               <li>Linear Algebra</li>
             </ul>
           </div>
-        </article>
-      </div>
-    </section>
-
-    <section id="certifications" class="section">
-      <div class="section-inner">
-        <h2>Certifications</h2>
-        <div class="certification-grid">
-          <article class="cert-card">
-            <div class="item-header">
-              <h3>Udemy</h3>
-            </div>
-            <ul class="cert-list">
-              <li>Unreal Engine C++ Game Development</li>
-              <li>Advanced C# Scripting in Unity</li>
-              <li>Advanced C++ Programming</li>
-              <li>Shader Development for Unity with Cg</li>
-              <li>Vulkan API with C++</li>
-            </ul>
-          </article>
-          <article class="cert-card">
-            <div class="item-header">
-              <h3>Coursera &amp; Online Series</h3>
-            </div>
-            <ul class="cert-list">
-              <li>Game Engine Architecture</li>
-              <li>Game Design Patterns</li>
-              <li>Cherno – Game Engine Development Series</li>
-              <li>Cherno – OpenGL Rendering Series</li>
-            </ul>
-          </article>
-        </div>
-      </div>
-    </section>
-
-    <section id="experience" class="section">
-      <div class="section-inner">
-        <h2>Experience</h2>
-        <article class="experience-card">
-          <div class="item-header">
-            <div>
-              <h3>Electronic Arts - Lifestyle</h3>
-              <p class="item-subtitle">Software Engineer (Tools and Tech-Art) · Seattle, WA</p>
-            </div>
-            <span>2025 – Present</span>
-          </div>
-          <div class="item-description">
-            Architected a project-agnostic animation stylization tool in Maya/Python with modular PySide/Qt UIs, adopted across multiple EA studios and cutting manual keyframing by over 70%.
-            Created a high-throughput Unreal Engine C++ plugin that exports in-game character trajectory, pose, and velocity data for motion-matching animation databases.
-            Prototyped and integrated genAI/ML content tools using PyTorch and ONNX Runtime, including automated asset tagging and procedural pose generation, focused on being fast and non-intrusive for artists across EA projects.
-          </div>
-        </article>
-
-        <article class="experience-card">
-          <div class="item-header">
-            <div>
-              <h3>Electronic Arts - Maxis Studios</h3>
-              <p class="item-subtitle">Software Engineer (Gameplay and Animation) · Seattle, WA</p>
-            </div>
-            <span>2021 – 2025</span>
-          </div>
-          <div class="item-description">
-            Contributed to the pre-production of Project Rene, an upcoming Sims experience built in Unreal Engine 5.
-            Architected a multi-threaded async path-planning and navigation API in C++ for deterministic character routing and real-time obstacle avoidance, held under a 1.5ms frame budget.
-            Implemented core locomotion and animation runtime features, including motion matching, distance matching, custom IK, and animation event systems.
-            Worked on gameplay systems with GAS, along with dense crowd and shared multiplayer simulation.
-            Built in-editor tuning tools and visual debuggers for designers and technical animators.
-            Profiled runtime memory, compute, and frame budgets, eliminating hitches in character evaluation graphs and spatial query sweeps.
-            Worked closely with gameplay design, technical animation, QA, and the simulation and experience-design teams to prototype, iterate on, and polish features.
-          </div>
-        </article>
-
-        <article class="experience-card">
-          <div class="item-header">
-            <div>
-              <h3>Lionbridge</h3>
-              <p class="item-subtitle">Senior Games Test Engineer · Boise, ID</p>
-            </div>
-            <span>2020 – 2021</span>
-          </div>
-          <div class="item-description">
-            Led a team of QA testers at Lionbridge, an outsourced functional and localization testing firm for video games, working on live-service multiplayer titles.
-            Created well-documented bug reports through a combination of combinatorial, tree, regression, and ad hoc testing methodologies, triaged in JIRA.
-            Provided additional insight on existing bug reports using previous knowledge of engine and gameplay programming.
-          </div>
-        </article>
-
-        <article class="experience-card">
-          <div class="item-header">
-            <div>
-              <h3>TurnUp</h3>
-              <p class="item-subtitle">Software Engineer Intern · Remote</p>
-            </div>
-            <span>2020</span>
-          </div>
-          <div class="item-description">
-            Interned as a team lead for the development of TurnUp, a web/mobile app
-            for a youth activism organization and networking. Developed cross-platform
-            API for application features in React Native and Express.js. Handled pull
-            requests, code reviews, and unit testing for the intern team’s feature
-            implementations.</div>
-        </article>
-
-        <article class="experience-card">
-          <div class="item-header">
-            <div>
-              <h3>Boise State University - Department of Computer Science</h3>
-              <p class="item-subtitle">Undergraduate Research Assistant · Boise, ID</p>
-            </div>
-            <span>2020</span>
-          </div>
-          <div class="item-description">
-            Developed a distributed content production pipeline intended for Boise
-            State University’s “World Museum” project. Researched and implemented
-            image processing and compression algorithms to develop web-based digital asset management software. Designed and implemented
-            database schemas for the asset tagging system.</div>
-        </article>
-
-        <article class="experience-card">
-          <div class="item-header">
-            <div>
-              <h3>Boise State University - Advising and Academic Support Center</h3>
-              <p class="item-subtitle">Learning Assistant · Boise, ID</p>
-            </div>
-            <span>2019 – 2020</span>
-          </div>
-          <div class="item-description">
-            Assisted in courses on object-oriented design principles, test-driven
-            development, and elementary data structures. Held tutoring sessions to
-            assist students in designing and debugging Java programming projects.
-            Refactored auto-grading system for new online summer curriculum.</div>
         </article>
       </div>
     </section>

@@ -14,10 +14,9 @@ document.addEventListener('DOMContentLoaded', () => {
       </button>
       <nav class="site-nav" aria-label="Primary">
         <a href="index.html#top">About</a>
+        <a href="index.html#experience">Experience</a>
         <a href="index.html#skills">Skills</a>
         <a href="index.html#education">Education</a>
-        <a href="index.html#certifications">Certifications</a>
-        <a href="index.html#experience">Experience</a>
         <a href="portfolio.html">Portfolio</a>
         <a href="blog.html">Blog</a>
       </nav>
