@@ -112,7 +112,7 @@ document.addEventListener('DOMContentLoaded', () => {
       { icon: 'linkedin', label: 'LinkedIn', href: 'https://www.linkedin.com/in/hoowan/' },
       { icon: 'github', label: 'GitHub', href: 'https://github.com/hoowan-dev' },
       { icon: 'mail', label: 'Email', href: 'mailto:becerrajuan007@gmail.com' },
-      { icon: 'file', label: 'Resume (PDF)', href: 'https://github.com/hoowan-dev/resume/blob/main/out/resume.pdf' }
+      { icon: 'file', label: 'Resume (PDF)', href: 'media/Juan_Becerra_Resume.pdf' }
     ];
     const socialLinks = socials.map(({ icon, label, href }) => {
       const external = href.startsWith('http') ? ' target="_blank" rel="noopener noreferrer"' : '';
@@ -127,7 +127,7 @@ document.addEventListener('DOMContentLoaded', () => {
             <h2 id="cta-heading">Interested in working together?</h2>
             <p>I'm open to software engineering and game development roles. Grab my resume or reach out directly.</p>
             <div class="hero-actions">
-              <a href="https://github.com/hoowan-dev/resume/blob/main/out/resume.pdf" class="primary-btn" target="_blank" rel="noopener noreferrer">Resume (PDF)</a>
+              <a href="media/Juan_Becerra_Resume.pdf" class="primary-btn" target="_blank" rel="noopener noreferrer">Resume (PDF)</a>
               <a href="mailto:becerrajuan007@gmail.com" class="secondary-btn">Email Me</a>
               <a href="https://www.linkedin.com/in/hoowan/" class="secondary-btn" target="_blank" rel="noopener noreferrer">LinkedIn</a>
               <a href="https://github.com/hoowan-dev" class="secondary-btn" target="_blank" rel="noopener noreferrer">GitHub</a>
