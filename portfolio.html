@@ -4,7 +4,21 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Juan Becerra | Portfolio</title>
-  <meta name="description" content="Portfolio page for Juan Becerra, showcasing software engineering and game development projects." />
+  <meta name="description" content="Projects by Juan Becerra: Unreal Engine 5 games and tools, a C++/OpenGL game engine, AI tooling for game development, and developer utilities." />
+  <link rel="canonical" href="https://hoowan.dev/portfolio.html" />
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="hoowan.dev" />
+  <meta property="og:title" content="Juan Becerra | Portfolio" />
+  <meta property="og:description" content="Projects by Juan Becerra: Unreal Engine 5 games and tools, a C++/OpenGL game engine, AI tooling for game development, and developer utilities." />
+  <meta property="og:url" content="https://hoowan.dev/portfolio.html" />
+  <meta property="og:image" content="https://hoowan.dev/media/og-image.jpg" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta property="og:image:alt" content="Juan Becerra, Software Engineer: gameplay, animation, tools, and AI systems" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Juan Becerra | Portfolio" />
+  <meta name="twitter:description" content="Projects by Juan Becerra: Unreal Engine 5 games and tools, a C++/OpenGL game engine, AI tooling for game development, and developer utilities." />
+  <meta name="twitter:image" content="https://hoowan.dev/media/og-image.jpg" />
   <link rel="stylesheet" href="styles.css" />
   <link rel="icon" type="image/x-icon" href="favicon.ico" />
   <script src="js/components.js" defer></script>
@@ -12,6 +26,14 @@
 <body id="top">
   <div class="page-shell">
     <header class="site-header"></header>
+    <noscript>
+      <nav class="noscript-nav" aria-label="Primary">
+        <a href="index.html">About</a>
+        <a href="index.html#experience">Experience</a>
+        <a href="portfolio.html">Portfolio</a>
+        <a href="blog.html">Blog</a>
+      </nav>
+    </noscript>
 
     <main class="hero-layout centered-hero">
       <section class="hero-panel">
@@ -20,18 +42,19 @@
       </section>
     </main>
 
-    <section id="good-stuff" class="section">
+    <section id="featured" class="section">
       <div class="section-inner">
         <div class="section-header">
-          <h2>The Good Stuff</h2>
-          <p>The projects that I'm particularly proud of 🎮🏆✨</p>
+          <h2>Featured Projects</h2>
+          <p>The work I'm proudest of: games, engines, and the tooling that helps build them 🎮</p>
         </div>
         <div class="skill-grid">
 
           <article class="experience-card">
-            <img src="media/portfolio/protoboy.png" alt="ProtoBoy's pillar tree editor, with a Fellowship root node branching into Gameplay, Animation, Art, Audio, Content and UI pillars" class="project-image">
+            <img src="media/portfolio/protoboy.webp" alt="ProtoBoy's pillar tree editor, with a Fellowship root node branching into Gameplay, Animation, Art, Audio, Content and UI pillars" class="project-image" width="1200" height="310" decoding="async">
             <div class="item-header">
               <div>
+                <p class="project-tag project-tag--personal">Personal</p>
                 <h3><a href="https://github.com/hoowan-dev/protoboy">ProtoBoy</a></h3>
                 <p class="item-subtitle">Build games, not slop. An MCP server and retrieval layer that grounds AI coding agents in a game's design docs, built as an Unreal Engine 5.9 plugin in C++.</p>
               </div>
@@ -47,9 +70,10 @@
           </article>
 
           <article class="experience-card">
-            <img src="media/portfolio/fellowship.jpg" alt="A Fellowship character in knight armor climbing a tall wall with a sword and potions equipped, showing climbing IK debug markers, the equipment HUD and the event log" class="project-image">
+            <img src="media/portfolio/fellowship.webp" alt="A Fellowship character in knight armor climbing a tall wall with a sword and potions equipped, showing climbing IK debug markers, the equipment HUD and the event log" class="project-image" width="1200" height="739" decoding="async">
             <div class="item-header">
               <div>
+                <p class="project-tag project-tag--personal">Personal</p>
                 <h3><a href="https://github.com/hoowan-dev/Fellowship">Fellowship</a></h3>
                 <p class="item-subtitle">Third-person action RPG about the friends we made along the way, built in Unreal Engine 5.9 and C++</p>
               </div>
@@ -65,133 +89,10 @@
           </article>
 
           <article class="experience-card">
-            <img src="media/portfolio/doomslop.png" alt="DoomSlop" class="project-image">
+            <img src="media/portfolio/resume.webp" alt="Juan Becerra's resume, showing the name header and experience section" class="project-image" width="1600" height="888" loading="lazy" decoding="async">
             <div class="item-header">
               <div>
-                <h3><a href="https://hoowan-dev.github.io/DoomSlop/">DoomSlop</a></h3>
-                <p class="item-subtitle">Minimal browser FPS built in Three.js and Vite</p>
-              </div>
-              <span>September 2026</span>
-            </div>
-            <div class="experience-details">DoomSlop is a minimal 3D browser-based first-person shooter built with Three.js and Vite. Players navigate a 3D arena using pointer-lock camera look and keyboard controls, shooting waves of floating enemies. Defeating 25 enemies summons one of five unique bosses drawn at random with customized portraits and audio. Key features include hitscan raycasting, synthesized sound effects using the Web Audio API without external audio files, a dynamic DOM-based HUD with vitals and directional damage vignettes, a rotating 2D canvas radar minimap, and automated GitHub Pages deployment via Vite.</div>
-            <div class="experience-actions">
-              <a href="https://hoowan-dev.github.io/DoomSlop/" class="experience-link primary" target="_blank" rel="noopener noreferrer">
-                <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><polygon points="5 3 19 12 5 21 5 3"></polygon></svg>
-                <span>Play Demo</span>
-              </a>
-              <a href="https://github.com/hoowan-dev/DoomSlop" class="experience-link" target="_blank" rel="noopener noreferrer">
-                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg>
-                <span>View Project</span>
-              </a>
-            </div>
-          </article>
-
-          <article class="experience-card">
-            <img src="media/portfolio/broncodrome.png" alt="BroncoDrome" class="project-image">
-            <div class="item-header">
-              <div>
-                <h3><a href="https://github.com/juanbecerra0/BroncoDrome">BroncoDrome</a></h3>
-                <p class="item-subtitle">3rd-person vehicular combat game developed in Unreal Engine 4 and C++</p>
-              </div>
-              <span>May 2021</span>
-            </div>
-            <div class="experience-details">BroncoDrome is a 3rd-person vehicular combat game developed in Unreal 4, C++, and Blueprints. This was my group senior design project where we were tasked to design and develop a complex architecture project over the course of several months. In the end, our group was able to create the base of a driving game inspired by other vehicular combat games (namely DeathDrome and Mario Kart). Players drive around an arena inspired by Boise State’s Albertson’s Stadium, get pick-ups that temporarily boost stats, and fire a blaster at other enemy, AI controlled vehicles. Overall, the goal of the project was to develop a base for a game that future senior design groups can take over and add features to.</div>
-            <div class="experience-actions">
-              <a href="https://github.com/juanbecerra0/BroncoDrome" class="experience-link" target="_blank" rel="noopener noreferrer">
-                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg>
-                <span>View Project</span>
-              </a>
-            </div>
-          </article>
-
-          <article class="experience-card">
-            <img src="media/portfolio/engine.png" alt="Hoowan" class="project-image">
-            <div class="item-header">
-              <div>
-                <h3><a href="https://github.com/juanbecerra0/Hoowan">Hoowan</a></h3>
-                <p class="item-subtitle">Game engine developed in OpenGL and C++</p>
-              </div>
-              <span>November 2020</span>
-            </div>
-            <div class="experience-details">“Hoowan” is my game engine that I’m developing using C++, OpenGL, and several desktop application libraries. I started this project with the intention of learning more about game engine architecture, C++ development practices, and real-time rendering. This is by far my most ambitious project, and I don’t really foresee an ending point, but I nonetheless hope to periodically pour more into something I’m passionate about. Currently, Hoowan boasts a 2D rendering submission API written in OpenGL, an entity-component system built using EnTT, an input-polling event system for user interaction, and a basic collision detection/correction system. While not completely ready for development, very basic 2D games can be built using Hoowan’s statically-linked library and editor application.</div>
-            <div class="experience-actions">
-              <a href="https://github.com/juanbecerra0/Hoowan" class="experience-link" target="_blank" rel="noopener noreferrer">
-                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg>
-                <span>View Project</span>
-              </a>
-            </div>
-          </article>
-
-          <article class="experience-card">
-            <img src="media/portfolio/chasm.jpg" alt="Chasm" class="project-image">
-            <div class="item-header">
-              <div>
-                <h3><a href="https://gitlab.com/becerrajuan007/chasmwatch">Chasm</a></h3>
-                <p class="item-subtitle">3rd-person action role-playing game developed in Unity and C#</p>
-              </div>
-              <span>November 2020</span>
-            </div>
-            <div class="experience-details">Chasm is a 3rd-person action role-playing game developed in Unity. It’s heavily inspired by other games of the genres, such as Dark Souls and the Legend of Zelda. This started off as a small side project to familiarize myself more with Unity, but it has managed to become a competent prototype in its own right. The game has you explore a dark, mysterious dungeon while fighting monsters and solving puzzles.</div>
-            <div class="experience-actions">
-              <a href="https://gitlab.com/becerrajuan007/chasmwatch" class="experience-link" target="_blank" rel="noopener noreferrer">
-                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg>
-                <span>View Project</span>
-              </a>
-            </div>
-          </article>
-
-          <article class="experience-card">
-            <img src="media/portfolio/terrainEngine.PNG" alt="Terrain Engine" class="project-image">
-            <div class="item-header">
-              <div>
-                <h3><a href="https://github.com/juanbecerra0/Volcanic-Terrain-Generator">Terrain Engine</a></h3>
-                <p class="item-subtitle">Procedural geometry generator developed in Unity and C#</p>
-              </div>
-              <span>May 2020</span>
-            </div>
-            <div class="experience-details">This is my procedural terrain generator built using Unity. In this project, I researched and implemented several fractal-based procedural terrain generation techniques for my Advanced Computer Graphics course at Boise State University. It features biome partitioning, which modifies geometry noise-space to match different biomes, blends different materials on prefab geometry blocks, and procedurally places models based on the biome. I've finished the first version of this project, and I hope to add more features in the future.</div>
-            <div class="experience-actions">
-              <a href="https://github.com/juanbecerra0/Volcanic-Terrain-Generator" class="experience-link" target="_blank" rel="noopener noreferrer">
-                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg>
-                <span>View Project</span>
-              </a>
-            </div>
-          </article>
-
-        </div>
-      </div>
-    </section>
-
-    <section id="meh-stuff" class="section">
-      <div class="section-inner">
-        <div class="section-header">
-          <h2>The Mid Stuff</h2>
-          <p>The projects that most certainly exist 🙈🍝💀</p>
-        </div>
-        <div class="skill-grid">
-
-          <article class="experience-card">
-            <img src="media/portfolio/obsidian.svg" alt="A note editor with a daily brief code block, next to a dark crystal and a graph of linked notes" class="project-image">
-            <div class="item-header">
-              <div>
-                <h3><a href="https://github.com/hoowan-dev/obsidian-plugins">Obsidian Plugins</a></h3>
-                <p class="item-subtitle">Custom Obsidian plugins, starting with a Claude-powered daily brief, written in TypeScript</p>
-              </div>
-              <span>November 2026</span>
-            </div>
-            <div class="experience-details">A home for the Obsidian plugins I write for my own vault. The first one, Claude Daily Brief, turns a code block in a note into a morning briefing. Click the button and it runs Claude Code in the background, which reads my email, calendar, files, and task boards through whatever connectors are hooked up, while a live log shows every tool call. When it's done, the brief replaces the block as plain Markdown. Since inboxes are full of untrusted content, Claude only gets tools whose names clearly read (get, list, search, fetch) and never write (send, create, delete), and anything it can't classify is excluded. Shell, file, and web tools are blocked outright. If I edit the note mid-run, the plugin finds the block again by its contents, and if the block is gone, the brief lands on my clipboard instead.</div>
-            <div class="experience-actions">
-              <a href="https://github.com/hoowan-dev/obsidian-plugins" class="experience-link" target="_blank" rel="noopener noreferrer">
-                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg>
-                <span>View Project</span>
-              </a>
-            </div>
-          </article>
-
-          <article class="experience-card">
-            <img src="media/portfolio/resume.png" alt="Juan Becerra's resume, showing the name header and experience section" class="project-image">
-            <div class="item-header">
-              <div>
+                <p class="project-tag project-tag--personal">Personal</p>
                 <h3><a href="https://github.com/hoowan-dev/resume">Resume Pipeline</a></h3>
                 <p class="item-subtitle">My resume as code, plus a job-targeting pipeline written in LaTeX, Python, and PowerShell</p>
               </div>
@@ -211,9 +112,140 @@
           </article>
 
           <article class="experience-card">
-            <img src="media/portfolio/stream-deck.svg" alt="A macro keypad with glowing keys showing usage bars, a microphone, a monitor, and a terminal" class="project-image">
+            <img src="media/portfolio/obsidian.svg" alt="A note editor with a daily brief code block, next to a dark crystal and a graph of linked notes" class="project-image" width="1600" height="900" loading="lazy" decoding="async">
             <div class="item-header">
               <div>
+                <p class="project-tag project-tag--personal">Personal</p>
+                <h3><a href="https://github.com/hoowan-dev/obsidian-plugins">Obsidian Plugins</a></h3>
+                <p class="item-subtitle">Custom Obsidian plugins, starting with a Claude-powered daily brief, written in TypeScript</p>
+              </div>
+              <span>November 2026</span>
+            </div>
+            <div class="experience-details">A home for the Obsidian plugins I write for my own vault. The first one, Claude Daily Brief, turns a code block in a note into a morning briefing. Click the button and it runs Claude Code in the background, which reads my email, calendar, files, and task boards through whatever connectors are hooked up, while a live log shows every tool call. When it's done, the brief replaces the block as plain Markdown. Since inboxes are full of untrusted content, Claude only gets tools whose names clearly read (get, list, search, fetch) and never write (send, create, delete), and anything it can't classify is excluded. Shell, file, and web tools are blocked outright. If I edit the note mid-run, the plugin finds the block again by its contents, and if the block is gone, the brief lands on my clipboard instead.</div>
+            <div class="experience-actions">
+              <a href="https://github.com/hoowan-dev/obsidian-plugins" class="experience-link" target="_blank" rel="noopener noreferrer">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg>
+                <span>View Project</span>
+              </a>
+            </div>
+          </article>
+
+          <article class="experience-card">
+            <img src="media/portfolio/doomslop.webp" alt="DoomSlop" class="project-image" width="1200" height="675" loading="lazy" decoding="async">
+            <div class="item-header">
+              <div>
+                <p class="project-tag project-tag--personal">Personal</p>
+                <h3><a href="https://hoowan-dev.github.io/DoomSlop/">DoomSlop</a></h3>
+                <p class="item-subtitle">Minimal browser FPS built in Three.js and Vite</p>
+              </div>
+              <span>September 2026</span>
+            </div>
+            <div class="experience-details">DoomSlop is a minimal 3D browser-based first-person shooter built with Three.js and Vite. Players navigate a 3D arena using pointer-lock camera look and keyboard controls, shooting waves of floating enemies. Defeating 25 enemies summons one of five unique bosses drawn at random with customized portraits and audio. Key features include hitscan raycasting, synthesized sound effects using the Web Audio API without external audio files, a dynamic DOM-based HUD with vitals and directional damage vignettes, a rotating 2D canvas radar minimap, and automated GitHub Pages deployment via Vite.</div>
+            <div class="experience-actions">
+              <a href="https://hoowan-dev.github.io/DoomSlop/" class="experience-link primary" target="_blank" rel="noopener noreferrer">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><polygon points="5 3 19 12 5 21 5 3"></polygon></svg>
+                <span>Play Demo</span>
+              </a>
+              <a href="https://github.com/hoowan-dev/DoomSlop" class="experience-link" target="_blank" rel="noopener noreferrer">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg>
+                <span>View Project</span>
+              </a>
+            </div>
+          </article>
+
+          <article class="experience-card">
+            <img src="media/portfolio/broncodrome.webp" alt="BroncoDrome" class="project-image" width="600" height="600" loading="lazy" decoding="async">
+            <div class="item-header">
+              <div>
+                <p class="project-tag project-tag--academic">Academic</p>
+                <h3><a href="https://github.com/juanbecerra0/BroncoDrome">BroncoDrome</a></h3>
+                <p class="item-subtitle">3rd-person vehicular combat game developed in Unreal Engine 4 and C++</p>
+              </div>
+              <span>May 2021</span>
+            </div>
+            <div class="experience-details">BroncoDrome is a 3rd-person vehicular combat game developed in Unreal 4, C++, and Blueprints. This was my group senior design project where we were tasked to design and develop a complex architecture project over the course of several months. In the end, our group was able to create the base of a driving game inspired by other vehicular combat games (namely DeathDrome and Mario Kart). Players drive around an arena inspired by Boise State’s Albertson’s Stadium, get pick-ups that temporarily boost stats, and fire a blaster at other enemy, AI controlled vehicles. Overall, the goal of the project was to develop a base for a game that future senior design groups can take over and add features to.</div>
+            <div class="experience-actions">
+              <a href="https://github.com/juanbecerra0/BroncoDrome" class="experience-link" target="_blank" rel="noopener noreferrer">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg>
+                <span>View Project</span>
+              </a>
+            </div>
+          </article>
+
+          <article class="experience-card">
+            <img src="media/portfolio/engine.webp" alt="Hoowan" class="project-image" width="600" height="600" loading="lazy" decoding="async">
+            <div class="item-header">
+              <div>
+                <p class="project-tag project-tag--personal">Personal</p>
+                <h3><a href="https://github.com/juanbecerra0/Hoowan">Hoowan</a></h3>
+                <p class="item-subtitle">Game engine developed in OpenGL and C++</p>
+              </div>
+              <span>November 2020</span>
+            </div>
+            <div class="experience-details">“Hoowan” is my game engine that I’m developing using C++, OpenGL, and several desktop application libraries. I started this project with the intention of learning more about game engine architecture, C++ development practices, and real-time rendering. This is by far my most ambitious project, and I don’t really foresee an ending point, but I nonetheless hope to periodically pour more into something I’m passionate about. Currently, Hoowan boasts a 2D rendering submission API written in OpenGL, an entity-component system built using EnTT, an input-polling event system for user interaction, and a basic collision detection/correction system. While not completely ready for development, very basic 2D games can be built using Hoowan’s statically-linked library and editor application.</div>
+            <div class="experience-actions">
+              <a href="https://github.com/juanbecerra0/Hoowan" class="experience-link" target="_blank" rel="noopener noreferrer">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg>
+                <span>View Project</span>
+              </a>
+            </div>
+          </article>
+
+          <article class="experience-card">
+            <img src="media/portfolio/chasm.webp" alt="Chasm" class="project-image" width="600" height="600" loading="lazy" decoding="async">
+            <div class="item-header">
+              <div>
+                <p class="project-tag project-tag--personal">Personal</p>
+                <h3><a href="https://gitlab.com/becerrajuan007/chasmwatch">Chasm</a></h3>
+                <p class="item-subtitle">3rd-person action role-playing game developed in Unity and C#</p>
+              </div>
+              <span>November 2020</span>
+            </div>
+            <div class="experience-details">Chasm is a 3rd-person action role-playing game developed in Unity. It’s heavily inspired by other games of the genres, such as Dark Souls and the Legend of Zelda. This started off as a small side project to familiarize myself more with Unity, but it has managed to become a competent prototype in its own right. The game has you explore a dark, mysterious dungeon while fighting monsters and solving puzzles.</div>
+            <div class="experience-actions">
+              <a href="https://gitlab.com/becerrajuan007/chasmwatch" class="experience-link" target="_blank" rel="noopener noreferrer">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg>
+                <span>View Project</span>
+              </a>
+            </div>
+          </article>
+
+          <article class="experience-card">
+            <img src="media/portfolio/terrainEngine.webp" alt="Terrain Engine" class="project-image" width="600" height="600" loading="lazy" decoding="async">
+            <div class="item-header">
+              <div>
+                <p class="project-tag project-tag--academic">Academic</p>
+                <h3><a href="https://github.com/juanbecerra0/Volcanic-Terrain-Generator">Terrain Engine</a></h3>
+                <p class="item-subtitle">Procedural geometry generator developed in Unity and C#</p>
+              </div>
+              <span>May 2020</span>
+            </div>
+            <div class="experience-details">This is my procedural terrain generator built using Unity. In this project, I researched and implemented several fractal-based procedural terrain generation techniques for my Advanced Computer Graphics course at Boise State University. It features biome partitioning, which modifies geometry noise-space to match different biomes, blends different materials on prefab geometry blocks, and procedurally places models based on the biome. I've finished the first version of this project, and I hope to add more features in the future.</div>
+            <div class="experience-actions">
+              <a href="https://github.com/juanbecerra0/Volcanic-Terrain-Generator" class="experience-link" target="_blank" rel="noopener noreferrer">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg>
+                <span>View Project</span>
+              </a>
+            </div>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <section id="more-projects" class="section">
+      <div class="section-inner">
+        <div class="section-header">
+          <h2>More Projects</h2>
+          <p>Developer tools, experiments, and coursework that rounded out my skills 🛠️</p>
+        </div>
+        <div class="skill-grid">
+
+          <article class="experience-card">
+            <img src="media/portfolio/stream-deck.svg" alt="A macro keypad with glowing keys showing usage bars, a microphone, a monitor, and a terminal" class="project-image" width="1600" height="900" loading="lazy" decoding="async">
+            <div class="item-header">
+              <div>
+                <p class="project-tag project-tag--personal">Personal</p>
                 <h3><a href="https://github.com/hoowan-dev/stream-deck">Stream Deck Plugins</a></h3>
                 <p class="item-subtitle">Custom Stream Deck plugins for my desk, written in Node.js on the Stream Deck SDK</p>
               </div>
@@ -229,9 +261,10 @@
           </article>
 
           <article class="experience-card">
-            <img src="media/portfolio/icue.svg" alt="A wide touchscreen under a monitor showing CPU, GPU, and RAM load gauges" class="project-image">
+            <img src="media/portfolio/icue.svg" alt="A wide touchscreen under a monitor showing CPU, GPU, and RAM load gauges" class="project-image" width="1600" height="900" loading="lazy" decoding="async">
             <div class="item-header">
               <div>
+                <p class="project-tag project-tag--personal">Personal</p>
                 <h3><a href="https://github.com/hoowan-dev/icue">iCUE Widgets</a></h3>
                 <p class="item-subtitle">A hardware monitor widget for a Corsair XENEON EDGE, written in HTML, JavaScript, and Python</p>
               </div>
@@ -247,9 +280,10 @@
           </article>
 
           <article class="experience-card">
-            <img src="media/portfolio/neetcode.svg" alt="A code editor with a Python two-sum solution beside a binary tree and a solved counter" class="project-image">
+            <img src="media/portfolio/neetcode.svg" alt="A code editor with a Python two-sum solution beside a binary tree and a solved counter" class="project-image" width="1600" height="900" loading="lazy" decoding="async">
             <div class="item-header">
               <div>
+                <p class="project-tag project-tag--personal">Personal</p>
                 <h3><a href="https://github.com/hoowan-dev/neetcode-submissions">NeetCode Submissions</a></h3>
                 <p class="item-subtitle">118 data structures and algorithms problems and counting, mostly in Python</p>
               </div>
@@ -265,9 +299,10 @@
           </article>
 
           <article class="experience-card">
-            <img src="media/portfolio/jamn_sales_tracker.png" alt="JAMN Sales Tracker" class="project-image">
+            <img src="media/portfolio/jamn_sales_tracker.webp" alt="JAMN Sales Tracker" class="project-image" width="1350" height="664" loading="lazy" decoding="async">
             <div class="item-header">
               <div>
+                <p class="project-tag project-tag--personal">Personal</p>
                 <h3><a href="https://github.com/hoowan-dev/jamn_sales_tracker">JAMN Sales Tracker</a></h3>
                 <p class="item-subtitle">Sales tracker for my band, JAMN. Written in Python and Flask.</p>
               </div>
@@ -285,9 +320,10 @@
           </article>
 
           <article class="experience-card">
-            <img src="media/portfolio/commoncoop.png" alt="Common Co-op" class="project-image">
+            <img src="media/portfolio/commoncoop.webp" alt="Common Co-op" class="project-image" width="600" height="600" loading="lazy" decoding="async">
             <div class="item-header">
               <div>
+                <p class="project-tag project-tag--academic">Academic</p>
                 <h3><a href="https://github.com/juanbecerra0/CommonCore">Common Co-op</a></h3>
                 <p class="item-subtitle">Math web-game developed in Unity, C#, and OpenGL</p>
               </div>
@@ -303,9 +339,10 @@
           </article>
 
           <article class="experience-card">
-            <img src="media/portfolio/fractal.png" alt="Fractal Image Generator" class="project-image">
+            <img src="media/portfolio/fractal.webp" alt="Fractal Image Generator" class="project-image" width="600" height="600" loading="lazy" decoding="async">
             <div class="item-header">
               <div>
+                <p class="project-tag project-tag--personal">Personal</p>
                 <h3><a href="https://github.com/juanbecerra0/FractalImageGenerator">Fractal Image Generator</a></h3>
                 <p class="item-subtitle">Mandelbrot image generator developed in C++</p>
               </div>
@@ -321,9 +358,10 @@
           </article>
 
           <article class="experience-card">
-            <img src="media/portfolio/chon.png" alt="Chon" class="project-image">
+            <img src="media/portfolio/chon.webp" alt="Chon" class="project-image" width="600" height="600" loading="lazy" decoding="async">
             <div class="item-header">
               <div>
+                <p class="project-tag project-tag--personal">Personal</p>
                 <h3><a href="https://github.com/juanbecerra0/Chon">Chon</a></h3>
                 <p class="item-subtitle">Wheel spinning mobile application developed in Android Studio, Java, and OpenGL</p>
               </div>
@@ -339,9 +377,10 @@
           </article>
 
           <article class="experience-card">
-            <img src="media/portfolio/btree.PNG" alt="Bioinformatics BTree" class="project-image">
+            <img src="media/portfolio/btree.webp" alt="Bioinformatics BTree" class="project-image" width="600" height="600" loading="lazy" decoding="async">
             <div class="item-header">
               <div>
+                <p class="project-tag project-tag--academic">Academic</p>
                 <h3><a href="https://github.com/benjaminclark964/CS321-B-Tree">Bioinformatics BTree</a></h3>
                 <p class="item-subtitle">Data structure implementation written in Java</p>
               </div>
@@ -357,9 +396,10 @@
           </article>
 
           <article class="experience-card">
-            <img src="media/portfolio/resumefinder.PNG" alt="Resume Sorter" class="project-image">
+            <img src="media/portfolio/resumefinder.webp" alt="Resume Sorter" class="project-image" width="600" height="600" loading="lazy" decoding="async">
             <div class="item-header">
               <div>
+                <p class="project-tag project-tag--professional">Professional</p>
                 <h3><a href="https://github.com/juanbecerra0/extended-studies-resume-database">Resume Sorter</a></h3>
                 <p class="item-subtitle">Human-resources app developed in Java and SQL Server</p>
               </div>
@@ -375,9 +415,10 @@
           </article>
 
           <article class="experience-card">
-            <img src="media/portfolio/suspicion.jpg" alt="Suspicion Agent" class="project-image">
+            <img src="media/portfolio/suspicion.webp" alt="Suspicion Agent" class="project-image" width="600" height="600" loading="lazy" decoding="async">
             <div class="item-header">
               <div>
+                <p class="project-tag project-tag--academic">Academic</p>
                 <h3><a href="https://github.com/juanbecerra0/cs457-suspicion">Suspicion Agent</a></h3>
                 <p class="item-subtitle">"Suspicion" AI agent developed in Java</p>
               </div>
@@ -393,9 +434,10 @@
           </article>
 
           <article class="experience-card">
-            <img src="media/portfolio/marble.PNG" alt="3D Marble Game" class="project-image">
+            <img src="media/portfolio/marble.webp" alt="3D Marble Game" class="project-image" width="600" height="600" loading="lazy" decoding="async">
             <div class="item-header">
               <div>
+                <p class="project-tag project-tag--academic">Academic</p>
                 <h3><a href="https://github.com/SMS47/CS464-FinalProject">3D Marble Game</a></h3>
                 <p class="item-subtitle">Marble-rolling web-game developed in JavaScript and WebGL</p>
               </div>
@@ -411,9 +453,10 @@
           </article>
 
           <article class="experience-card">
-            <img src="media/portfolio/grocery.jpg" alt="Grocery Agent" class="project-image">
+            <img src="media/portfolio/grocery.webp" alt="Grocery Agent" class="project-image" width="600" height="600" loading="lazy" decoding="async">
             <div class="item-header">
               <div>
+                <p class="project-tag project-tag--academic">Academic</p>
                 <h3><a href="https://github.com/Emanuelh77/cs457-project1">Grocery Agent</a></h3>
                 <p class="item-subtitle">Grocery bagging AI agent developed in Python</p>
               </div>
@@ -429,9 +472,10 @@
           </article>
 
           <article class="experience-card">
-            <img src="media/portfolio/terrain.PNG" alt="Heightmap Terrain" class="project-image">
+            <img src="media/portfolio/terrain.webp" alt="Heightmap Terrain" class="project-image" width="600" height="600" loading="lazy" decoding="async">
             <div class="item-header">
               <div>
+                <p class="project-tag project-tag--academic">Academic</p>
                 <h3><a href="https://github.com/juanbecerra0/cs464_modeling">Heightmap Terrain</a></h3>
                 <p class="item-subtitle">Web-based terrain renderer developed in JavaScript and WebGL</p>
               </div>
@@ -447,9 +491,10 @@
           </article>
 
           <article class="experience-card">
-            <img src="media/portfolio/smash.PNG" alt="Smash" class="project-image">
+            <img src="media/portfolio/smash.webp" alt="Smash" class="project-image" width="600" height="600" loading="lazy" decoding="async">
             <div class="item-header">
               <div>
+                <p class="project-tag project-tag--academic">Academic</p>
                 <h3><a href="https://github.com/juanbecerra0/cs253_smash">Smash</a></h3>
                 <p class="item-subtitle">Console/Shell implementation developed in C and Bash</p>
               </div>
@@ -464,6 +509,21 @@
             </div>
           </article>
 
+        </div>
+      </div>
+    </section>
+
+    <section class="section portfolio-cta" aria-labelledby="cta-heading">
+      <div class="section-inner">
+        <div class="cta-panel">
+          <h2 id="cta-heading">Interested in working together?</h2>
+          <p>I'm open to software engineering and game development roles. Grab my resume or reach out directly.</p>
+          <div class="hero-actions">
+            <a href="https://github.com/hoowan-dev/resume/blob/main/out/resume.pdf" class="primary-btn" target="_blank" rel="noopener noreferrer">Resume (PDF)</a>
+            <a href="mailto:becerrajuan007@gmail.com" class="secondary-btn">Email Me</a>
+            <a href="https://www.linkedin.com/in/hoowan/" class="secondary-btn" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+            <a href="https://github.com/hoowan-dev" class="secondary-btn" target="_blank" rel="noopener noreferrer">GitHub</a>
+          </div>
         </div>
       </div>
     </section>

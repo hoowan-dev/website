@@ -812,6 +812,78 @@ svg {
   color: var(--text-muted);
 }
 
+.project-tag {
+  display: inline-flex;
+  margin: 0 0 0.4rem;
+  padding: 0.12rem 0.6rem;
+  border-radius: 999px;
+  border: 1px solid var(--border-subtle);
+  background: rgba(255, 255, 255, 0.04);
+  color: var(--text-dim);
+  font-size: 0.72rem;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  line-height: 1.6;
+  text-transform: uppercase;
+}
+
+.project-tag--professional {
+  border-color: var(--border-accent);
+  background: var(--accent-glow-subtle);
+  color: var(--accent-light);
+}
+
+.project-tag--academic {
+  border-color: rgba(148, 163, 184, 0.3);
+  color: var(--text-muted);
+}
+
+/* ==========================================================================
+   Portfolio Call to Action
+   ========================================================================== */
+
+.cta-panel {
+  display: grid;
+  justify-items: center;
+  gap: 0.75rem;
+  padding: 2.5rem 1.5rem;
+  border-radius: 1.25rem;
+  border: 1px solid var(--border-accent);
+  background: linear-gradient(180deg, var(--accent-glow-subtle), rgba(255, 255, 255, 0.02));
+  backdrop-filter: blur(12px);
+  text-align: center;
+}
+
+.cta-panel h2 {
+  margin: 0;
+}
+
+.cta-panel p {
+  margin: 0 0 0.5rem;
+  max-width: 36rem;
+  color: var(--text-muted);
+}
+
+.cta-panel .hero-actions {
+  justify-content: center;
+}
+
+/* ==========================================================================
+   No-JS Navigation Fallback
+   ========================================================================== */
+
+.noscript-nav {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1rem;
+  padding: 1rem;
+}
+
+.noscript-nav a {
+  color: var(--text-muted);
+}
+
 .education-card {
   display: grid;
   gap: 0.85rem;
