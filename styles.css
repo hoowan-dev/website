@@ -394,7 +394,7 @@ svg {
 .section-inner {
   display: grid;
   gap: 2rem;
-  width: min(100%, 1040px);
+  width: 100%;
   margin: 0 auto;
 }
 
@@ -416,7 +416,7 @@ svg {
 .skill-grid {
   display: grid;
   gap: 1.25rem;
-  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 320px), 1fr));
   margin-bottom: 2rem;
 }
 
@@ -620,10 +620,20 @@ svg {
 .project-image {
   width: 100%;
   height: auto;
+  aspect-ratio: 16 / 9;
+  object-fit: cover;
+  object-position: center top;
+  background: #05060e;
   border-radius: 0.75rem;
   margin-bottom: 0.5rem;
   cursor: pointer;
   transition: transform 0.25s ease, opacity 0.25s ease;
+}
+
+/* Wide or tall shots that would lose too much to cropping are letterboxed instead */
+.project-image--contain {
+  object-fit: contain;
+  object-position: center;
 }
 
 .experience-card.is-clickable {
@@ -900,10 +910,241 @@ svg {
   gap: 1rem;
 }
 
+/* ==========================================================================
+   Experience Timeline
+   ========================================================================== */
+
+.timeline {
+  position: relative;
+  display: grid;
+  gap: 1.5rem;
+  padding-left: 2.25rem;
+}
+
+.timeline::before {
+  content: "";
+  position: absolute;
+  top: 0.5rem;
+  bottom: 0.5rem;
+  left: 0.55rem;
+  width: 2px;
+  border-radius: 2px;
+  background: linear-gradient(180deg, var(--accent), rgba(220, 38, 38, 0.15));
+}
+
+.timeline > .experience-card {
+  position: relative;
+}
+
+.timeline > .experience-card::before {
+  content: "";
+  position: absolute;
+  top: 2.05rem;
+  left: calc(-2.25rem + 0.55rem - 6px + 1px);
+  width: 12px;
+  height: 12px;
+  border-radius: 999px;
+  background: var(--bg-canvas);
+  border: 2px solid var(--accent-light);
+  box-shadow: 0 0 0 4px var(--accent-glow-subtle), 0 0 12px var(--accent-glow);
+}
+
+.timeline > .experience-card:first-child::before {
+  background: var(--accent-light);
+}
+
+.item-subtitle strong {
+  color: var(--text-secondary);
+  font-weight: 600;
+}
+
+.role-highlights {
+  margin: 0;
+  padding-left: 1.1rem;
+  display: grid;
+  gap: 0.45rem;
+}
+
+.role-highlights li::marker {
+  color: var(--accent-light);
+}
+
+/* ==========================================================================
+   Skills (masonry) & Course Lists
+   ========================================================================== */
+
+.skill-grid.skill-masonry {
+  display: block;
+  columns: 3 260px;
+  column-gap: 1.25rem;
+}
+
+.skill-masonry > .skill-card {
+  break-inside: avoid;
+  margin-bottom: 1.25rem;
+}
+
+.course-list {
+  margin: 0;
+  padding-left: 1.1rem;
+  columns: 2 16rem;
+  column-gap: 2.5rem;
+}
+
+.course-list--short {
+  columns: auto;
+}
+
+.course-list li {
+  break-inside: avoid;
+  margin-bottom: 0.3rem;
+}
+
+.course-list li::marker {
+  color: var(--accent-light);
+}
+
+/* ==========================================================================
+   Links: underline only on hover
+   ========================================================================== */
+
+.experience-card h3 a,
+.sidebar-card a,
+.hero-copy a {
+  text-decoration: none;
+  text-underline-offset: 0.2em;
+  text-decoration-thickness: 1px;
+}
+
+.hero-copy a {
+  color: var(--accent-light);
+  font-weight: 600;
+}
+
+.experience-card h3 a:hover,
+.experience-card h3 a:focus-visible,
+.sidebar-card a:hover,
+.sidebar-card a:focus-visible,
+.hero-copy a:hover,
+.hero-copy a:focus-visible {
+  text-decoration: underline;
+  text-decoration-color: var(--accent-light);
+}
+
+/* ==========================================================================
+   Sidebar Icons
+   ========================================================================== */
+
+.sidebar-card [data-icon] {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.55rem;
+}
+
+.sidebar-card a[data-icon] {
+  margin-left: -0.4rem;
+  padding: 0.1rem 0.4rem;
+  border-radius: 0.5rem;
+}
+
+.sidebar-card [data-icon] .icon {
+  flex-shrink: 0;
+  color: var(--accent-light);
+  opacity: 0.85;
+}
+
+/* ==========================================================================
+   Blog Cards
+   ========================================================================== */
+
+.blog-list {
+  display: grid;
+  gap: 1.5rem;
+}
+
+.experience-card.blog-card {
+  display: grid;
+  grid-template-columns: minmax(0, 1.1fr) minmax(0, 1fr);
+  align-items: center;
+  gap: 2rem;
+}
+
+.blog-card .project-image {
+  margin: 0;
+  object-position: center;
+}
+
+.blog-card-body {
+  display: grid;
+  gap: 1.25rem;
+}
+
+.blog-card .item-header {
+  flex-direction: column-reverse;
+  gap: 0.25rem;
+}
+
+.blog-card .item-header > span {
+  color: var(--text-dim);
+  font-size: 0.9rem;
+}
+
+.blog-card h3 {
+  font-size: 1.5rem;
+}
+
+.blog-card-actions .experience-link {
+  font: inherit;
+  font-size: 0.9rem;
+  font-weight: 600;
+}
+
+/* ==========================================================================
+   Footer
+   ========================================================================== */
+
 .footer {
-  padding-top: 2rem;
+  display: grid;
+  justify-items: center;
+  gap: 1rem;
+  margin-top: 2rem;
+  padding-top: 2.5rem;
+  border-top: 1px solid rgba(148, 163, 184, 0.08);
   color: var(--text-dim);
   font-size: 0.95rem;
+  text-align: center;
+}
+
+.footer p {
+  margin: 0;
+}
+
+.footer-socials {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0.75rem;
+}
+
+.footer-social {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 2.75rem;
+  height: 2.75rem;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid var(--border-subtle);
+  color: var(--text-muted);
+  transition: all 0.2s ease;
+}
+
+.footer-social:hover,
+.footer-social:focus-visible {
+  color: #ffffff;
+  background: rgba(220, 38, 38, 0.16);
+  border-color: rgba(220, 38, 38, 0.5);
+  transform: translateY(-2px);
 }
 
 .back-to-top {
@@ -1078,6 +1319,23 @@ a {
 
   .hero-tags {
     gap: 0.5rem;
+  }
+
+  .experience-card.blog-card {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+
+  .timeline {
+    padding-left: 1.5rem;
+  }
+
+  .timeline::before {
+    left: 0.3rem;
+  }
+
+  .timeline > .experience-card::before {
+    left: calc(-1.5rem + 0.3rem - 6px + 1px);
   }
 }
 

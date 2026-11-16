@@ -50,8 +50,8 @@
         </div>
         <div class="skill-grid">
 
-          <article class="experience-card">
-            <img src="media/portfolio/protoboy.webp" alt="ProtoBoy's pillar tree editor, with a Fellowship root node branching into Gameplay, Animation, Art, Audio, Content and UI pillars" class="project-image" width="1200" height="310" decoding="async">
+          <article id="protoboy" class="experience-card">
+            <img src="media/portfolio/protoboy.webp" alt="ProtoBoy's pillar tree editor, with a Fellowship root node branching into Gameplay, Animation, Art, Audio, Content and UI pillars" class="project-image project-image--contain" width="1200" height="310" decoding="async">
             <div class="item-header">
               <div>
                 <p class="project-tag project-tag--personal">Personal</p>
@@ -69,7 +69,7 @@
             </div>
           </article>
 
-          <article class="experience-card">
+          <article id="fellowship" class="experience-card">
             <img src="media/portfolio/fellowship.webp" alt="A Fellowship character in knight armor climbing a tall wall with a sword and potions equipped, showing climbing IK debug markers, the equipment HUD and the event log" class="project-image" width="1200" height="739" decoding="async">
             <div class="item-header">
               <div>
@@ -82,48 +82,6 @@
             <div class="experience-details">Fellowship is a third-person action RPG prototype built around four pillars: metasystems, animation, gameplay, and (eventually) co-op multiplayer. The inventory is a spatial grid that lives inside the backpack you're wearing. Items take up multiple cells and rotate, and a dropped backpack keeps everything that was in it. Opening the inventory doesn't pause the game. Instead, your character holds the swaying backpack up in first person while the grid floats in front of it. Movement uses motion matching with Pose Search, and each weapon combination gets its own animation database, so sword-and-shield moves differently from a spear. A custom climbing mode follows walls and overhangs, with IK-planted hands and feet and a climbing gait. Combat has lock-on targeting with cinematic bars, and enemies are data-driven assets with pluggable behaviors. The first enemy is a walking cactus called the Prick. Rendering uses Lumen, hardware ray tracing, Virtual Shadow Maps, and Substrate materials, with automation tests for the core systems.</div>
             <div class="experience-actions">
               <a href="https://github.com/hoowan-dev/Fellowship" class="experience-link" target="_blank" rel="noopener noreferrer">
-                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg>
-                <span>View Project</span>
-              </a>
-            </div>
-          </article>
-
-          <article class="experience-card">
-            <img src="media/portfolio/resume.webp" alt="Juan Becerra's resume, showing the name header and experience section" class="project-image" width="1600" height="888" loading="lazy" decoding="async">
-            <div class="item-header">
-              <div>
-                <p class="project-tag project-tag--personal">Personal</p>
-                <h3><a href="https://github.com/hoowan-dev/resume">Resume Pipeline</a></h3>
-                <p class="item-subtitle">My resume as code, plus a job-targeting pipeline written in LaTeX, Python, and PowerShell</p>
-              </div>
-              <span>November 2026</span>
-            </div>
-            <div class="experience-details">Yes, my resume has a repository. The base resume is a single-page LaTeX document compiled to PDF with Tectonic, which means no heavyweight TeX install and version control for every rewording. On top of that sits a Python pipeline that takes a job posting link or a saved text file, cleans up the posting, and asks Claude to write a tailored resume and cover letter from a master skills inventory. Each document is then compiled and, if it errors or spills past one page, sent back for repairs. Since job postings are untrusted web content, Claude runs with every tool disabled and can only return text, while Tectonic compiles in its untrusted mode. PowerShell scripts handle builds and batches of links, and a failed link doesn't stop the rest.</div>
-            <div class="experience-actions">
-              <a href="https://github.com/hoowan-dev/resume/blob/main/out/resume.pdf" class="experience-link primary" target="_blank" rel="noopener noreferrer">
-                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="8" y1="13" x2="16" y2="13"></line><line x1="8" y1="17" x2="16" y2="17"></line></svg>
-                <span>View PDF</span>
-              </a>
-              <a href="https://github.com/hoowan-dev/resume" class="experience-link" target="_blank" rel="noopener noreferrer">
-                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg>
-                <span>View Project</span>
-              </a>
-            </div>
-          </article>
-
-          <article class="experience-card">
-            <img src="media/portfolio/obsidian.svg" alt="A note editor with a daily brief code block, next to a dark crystal and a graph of linked notes" class="project-image" width="1600" height="900" loading="lazy" decoding="async">
-            <div class="item-header">
-              <div>
-                <p class="project-tag project-tag--personal">Personal</p>
-                <h3><a href="https://github.com/hoowan-dev/obsidian-plugins">Obsidian Plugins</a></h3>
-                <p class="item-subtitle">Custom Obsidian plugins, starting with a Claude-powered daily brief, written in TypeScript</p>
-              </div>
-              <span>November 2026</span>
-            </div>
-            <div class="experience-details">A home for the Obsidian plugins I write for my own vault. The first one, Claude Daily Brief, turns a code block in a note into a morning briefing. Click the button and it runs Claude Code in the background, which reads my email, calendar, files, and task boards through whatever connectors are hooked up, while a live log shows every tool call. When it's done, the brief replaces the block as plain Markdown. Since inboxes are full of untrusted content, Claude only gets tools whose names clearly read (get, list, search, fetch) and never write (send, create, delete), and anything it can't classify is excluded. Shell, file, and web tools are blocked outright. If I edit the note mid-run, the plugin finds the block again by its contents, and if the block is gone, the brief lands on my clipboard instead.</div>
-            <div class="experience-actions">
-              <a href="https://github.com/hoowan-dev/obsidian-plugins" class="experience-link" target="_blank" rel="noopener noreferrer">
                 <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg>
                 <span>View Project</span>
               </a>
@@ -172,7 +130,7 @@
             </div>
           </article>
 
-          <article class="experience-card">
+          <article id="hoowan" class="experience-card">
             <img src="media/portfolio/engine.webp" alt="Hoowan" class="project-image" width="600" height="600" loading="lazy" decoding="async">
             <div class="item-header">
               <div>
@@ -240,6 +198,48 @@
           <p>Developer tools, experiments, and coursework that rounded out my skills 🛠️</p>
         </div>
         <div class="skill-grid">
+
+          <article class="experience-card">
+            <img src="media/portfolio/obsidian.svg" alt="A note editor with a daily brief code block, next to a dark crystal and a graph of linked notes" class="project-image" width="1600" height="900" loading="lazy" decoding="async">
+            <div class="item-header">
+              <div>
+                <p class="project-tag project-tag--personal">Personal</p>
+                <h3><a href="https://github.com/hoowan-dev/obsidian-plugins">Obsidian Plugins</a></h3>
+                <p class="item-subtitle">Custom Obsidian plugins, starting with a Claude-powered daily brief, written in TypeScript</p>
+              </div>
+              <span>November 2026</span>
+            </div>
+            <div class="experience-details">A home for the Obsidian plugins I write for my own vault. The first one, Claude Daily Brief, turns a code block in a note into a morning briefing. Click the button and it runs Claude Code in the background, which reads my email, calendar, files, and task boards through whatever connectors are hooked up, while a live log shows every tool call. When it's done, the brief replaces the block as plain Markdown. Since inboxes are full of untrusted content, Claude only gets tools whose names clearly read (get, list, search, fetch) and never write (send, create, delete), and anything it can't classify is excluded. Shell, file, and web tools are blocked outright. If I edit the note mid-run, the plugin finds the block again by its contents, and if the block is gone, the brief lands on my clipboard instead.</div>
+            <div class="experience-actions">
+              <a href="https://github.com/hoowan-dev/obsidian-plugins" class="experience-link" target="_blank" rel="noopener noreferrer">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg>
+                <span>View Project</span>
+              </a>
+            </div>
+          </article>
+
+          <article class="experience-card">
+            <img src="media/portfolio/resume.webp" alt="Juan Becerra's resume, showing the name header and experience section" class="project-image" width="1600" height="888" loading="lazy" decoding="async">
+            <div class="item-header">
+              <div>
+                <p class="project-tag project-tag--personal">Personal</p>
+                <h3><a href="https://github.com/hoowan-dev/resume">Resume Pipeline</a></h3>
+                <p class="item-subtitle">My resume as code, plus a job-targeting pipeline written in LaTeX, Python, and PowerShell</p>
+              </div>
+              <span>November 2026</span>
+            </div>
+            <div class="experience-details">Yes, my resume has a repository. The base resume is a single-page LaTeX document compiled to PDF with Tectonic, which means no heavyweight TeX install and version control for every rewording. On top of that sits a Python pipeline that takes a job posting link or a saved text file, cleans up the posting, and asks Claude to write a tailored resume and cover letter from a master skills inventory. Each document is then compiled and, if it errors or spills past one page, sent back for repairs. Since job postings are untrusted web content, Claude runs with every tool disabled and can only return text, while Tectonic compiles in its untrusted mode. PowerShell scripts handle builds and batches of links, and a failed link doesn't stop the rest.</div>
+            <div class="experience-actions">
+              <a href="https://github.com/hoowan-dev/resume/blob/main/out/resume.pdf" class="experience-link primary" target="_blank" rel="noopener noreferrer">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="8" y1="13" x2="16" y2="13"></line><line x1="8" y1="17" x2="16" y2="17"></line></svg>
+                <span>View PDF</span>
+              </a>
+              <a href="https://github.com/hoowan-dev/resume" class="experience-link" target="_blank" rel="noopener noreferrer">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg>
+                <span>View Project</span>
+              </a>
+            </div>
+          </article>
 
           <article class="experience-card">
             <img src="media/portfolio/stream-deck.svg" alt="A macro keypad with glowing keys showing usage bars, a microphone, a monitor, and a terminal" class="project-image" width="1600" height="900" loading="lazy" decoding="async">
@@ -509,21 +509,6 @@
             </div>
           </article>
 
-        </div>
-      </div>
-    </section>
-
-    <section class="section portfolio-cta" aria-labelledby="cta-heading">
-      <div class="section-inner">
-        <div class="cta-panel">
-          <h2 id="cta-heading">Interested in working together?</h2>
-          <p>I'm open to software engineering and game development roles. Grab my resume or reach out directly.</p>
-          <div class="hero-actions">
-            <a href="https://github.com/hoowan-dev/resume/blob/main/out/resume.pdf" class="primary-btn" target="_blank" rel="noopener noreferrer">Resume (PDF)</a>
-            <a href="mailto:becerrajuan007@gmail.com" class="secondary-btn">Email Me</a>
-            <a href="https://www.linkedin.com/in/hoowan/" class="secondary-btn" target="_blank" rel="noopener noreferrer">LinkedIn</a>
-            <a href="https://github.com/hoowan-dev" class="secondary-btn" target="_blank" rel="noopener noreferrer">GitHub</a>
-          </div>
         </div>
       </div>
     </section>
