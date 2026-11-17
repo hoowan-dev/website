@@ -128,9 +128,9 @@ document.addEventListener('DOMContentLoaded', () => {
             <p>I'm open to software engineering and game development roles. Grab my resume or reach out directly.</p>
             <div class="hero-actions">
               <a href="media/Juan_Becerra_Resume.pdf" class="primary-btn" target="_blank" rel="noopener noreferrer">Resume (PDF)</a>
-              <a href="mailto:becerrajuan007@gmail.com" class="secondary-btn">Email Me</a>
-              <a href="https://www.linkedin.com/in/hoowan/" class="secondary-btn" target="_blank" rel="noopener noreferrer">LinkedIn</a>
-              <a href="https://github.com/hoowan-dev" class="secondary-btn" target="_blank" rel="noopener noreferrer">GitHub</a>
+              <a href="mailto:becerrajuan007@gmail.com" class="primary-btn">Email Me</a>
+              <a href="https://www.linkedin.com/in/hoowan/" class="primary-btn" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+              <a href="https://github.com/hoowan-dev" class="primary-btn" target="_blank" rel="noopener noreferrer">GitHub</a>
             </div>
           </div>
         </div>
