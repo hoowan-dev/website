@@ -1527,6 +1527,22 @@ body::before {
   color: #1d2021;
 }
 
+/* Larger hero call to action */
+.primary-btn--lg {
+  padding: 1rem 1.9rem;
+  font-size: 1.1rem;
+  box-shadow: 4px 4px 0 #000, 0 0 24px -4px var(--accent-glow);
+}
+
+.primary-btn--lg:hover,
+.primary-btn--lg:focus-visible {
+  box-shadow: 6px 6px 0 #000, 0 0 32px -4px rgba(214, 93, 14, 0.45);
+}
+
+.primary-btn--lg:active {
+  box-shadow: 0 0 24px -4px var(--accent-glow);
+}
+
 /* Orange scrollbars (page + modal) */
 html,
 .project-modal-card {

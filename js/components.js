@@ -97,6 +97,55 @@ document.addEventListener('DOMContentLoaded', () => {
       }
     });
 
+    // Scroll spy (home page): highlight the nav link for the section in view
+    if (isHomePage) {
+      const spyTargets = ['experience', 'skills', 'education']
+        .map(id => ({
+          section: document.getElementById(id),
+          link: header.querySelector(`.site-nav a[href="index.html#${id}"]`)
+        }))
+        .filter(({ section, link }) => section && link);
+      const aboutLink = header.querySelector('.site-nav a[href="index.html#top"]');
+      let spyPending = false;
+
+      const updateActiveSection = () => {
+        spyPending = false;
+        // A section counts as current once its top passes ~35% down the viewport
+        const threshold = window.innerHeight * 0.35;
+        const atBottom = window.innerHeight + window.scrollY >= document.documentElement.scrollHeight - 2;
+        let activeLink = aboutLink;
+
+        spyTargets.forEach(({ section, link }) => {
+          if (section.getBoundingClientRect().top <= threshold) {
+            activeLink = link;
+          }
+        });
+        // Short last sections may never reach the threshold
+        if (atBottom && spyTargets.length) {
+          activeLink = spyTargets[spyTargets.length - 1].link;
+        }
+
+        navLinks.forEach(link => {
+          const isActive = link === activeLink;
+          link.classList.toggle('active', isActive);
+          if (isActive) {
+            link.setAttribute('aria-current', 'location');
+          } else {
+            link.removeAttribute('aria-current');
+          }
+        });
+      };
+
+      window.addEventListener('scroll', () => {
+        if (!spyPending) {
+          spyPending = true;
+          requestAnimationFrame(updateActiveSection);
+        }
+      }, { passive: true });
+      window.addEventListener('resize', updateActiveSection);
+      updateActiveSection();
+    }
+
     // Smooth scroll indicator on sticky bar
     window.addEventListener('scroll', () => {
       if (window.scrollY > 20) {
