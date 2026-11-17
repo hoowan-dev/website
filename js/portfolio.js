@@ -77,12 +77,39 @@ document.addEventListener('DOMContentLoaded', function () {
     }
     modal.classList.add('open');
     modal.setAttribute('aria-hidden', 'false');
+
+    // Add a history entry so the browser Back button closes the modal
+    // instead of leaving the page.
+    if (!history.state?.projectModal) {
+      history.pushState({ projectModal: true }, '');
+    }
   }
 
-  function closeModal() {
+  function hideModal() {
     modal.classList.remove('open');
     modal.setAttribute('aria-hidden', 'true');
   }
+
+  function closeModal() {
+    // Pop the modal's history entry; the popstate handler hides it.
+    if (history.state?.projectModal) {
+      history.back();
+    } else {
+      hideModal();
+    }
+  }
+
+  // A reload can leave us on a stale modal entry; clear it so closing
+  // a modal later never navigates away from the page.
+  if (history.state?.projectModal) {
+    history.replaceState(null, '');
+  }
+
+  window.addEventListener('popstate', function () {
+    if (modal.classList.contains('open')) {
+      hideModal();
+    }
+  });
 
   document.querySelectorAll('.experience-card').forEach(function (card) {
     card.classList.add('is-clickable');
