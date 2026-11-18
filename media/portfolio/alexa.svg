@@ -1,0 +1,94 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 900" width="1600" height="900" role="img" aria-label="A terminal running a lights routine, sending a signal to a smart speaker with a glowing ring that switches on a lamp">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#05060e"/>
+      <stop offset="1" stop-color="#140409"/>
+    </linearGradient>
+    <radialGradient id="glow" cx="0.5" cy="0.5" r="0.55">
+      <stop offset="0" stop-color="#dc2626" stop-opacity="0.22"/>
+      <stop offset="1" stop-color="#dc2626" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="bulbGlow" cx="0.5" cy="0.5" r="0.5">
+      <stop offset="0" stop-color="#ef4444" stop-opacity="0.55"/>
+      <stop offset="1" stop-color="#ef4444" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="panel" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#1a1b26"/>
+      <stop offset="1" stop-color="#08080e"/>
+    </linearGradient>
+    <linearGradient id="speaker" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#22232f"/>
+      <stop offset="1" stop-color="#0a0a12"/>
+    </linearGradient>
+  </defs>
+  <rect width="1600" height="900" fill="url(#bg)"/>
+  <rect width="1600" height="900" fill="url(#glow)"/>
+
+  <!-- terminal window -->
+  <g transform="translate(110 190)">
+    <rect width="760" height="500" rx="28" fill="url(#panel)" stroke="#ffffff" stroke-opacity="0.1" stroke-width="3"/>
+    <rect x="0" y="0" width="760" height="64" rx="28" fill="#ffffff" fill-opacity="0.04"/>
+    <circle cx="40" cy="32" r="10" fill="#ef4444"/>
+    <circle cx="72" cy="32" r="10" fill="#3a3b4a"/>
+    <circle cx="104" cy="32" r="10" fill="#3a3b4a"/>
+    <g font-family="Consolas, Menlo, monospace" font-size="28" xml:space="preserve">
+      <text x="44" y="132" fill="#ef4444">&gt;</text>
+      <text x="74" y="132" fill="#f5f5f7">alexa devices</text>
+      <text x="44" y="178" fill="#8b8c9c">online   Living Room   ECHO</text>
+      <text x="44" y="218" fill="#8b8c9c">online   Kitchen       ECHO</text>
+
+      <text x="44" y="284" fill="#ef4444">&gt;</text>
+      <text x="74" y="284" fill="#f5f5f7">alexa say Kitchen "Dinner!"</text>
+      <text x="44" y="326" fill="#8b8c9c">-&gt; Kitchen: said it</text>
+
+      <text x="44" y="392" fill="#ef4444">&gt;</text>
+      <text x="74" y="392" fill="#f5f5f7">alexa-lights mood-lights-on</text>
+      <text x="44" y="434" fill="#22c55e">-&gt; ran routine "mood lights on"</text>
+      <rect x="44" y="452" width="16" height="30" fill="#ef4444"/>
+    </g>
+  </g>
+
+  <!-- signal waves -->
+  <g fill="none" stroke="#ef4444" stroke-linecap="round" stroke-width="8">
+    <path d="M920 400 a70 70 0 0 1 0 100" stroke-opacity="0.9"/>
+    <path d="M955 370 a110 110 0 0 1 0 160" stroke-opacity="0.6"/>
+    <path d="M990 340 a150 150 0 0 1 0 220" stroke-opacity="0.3"/>
+  </g>
+
+  <!-- smart speaker (puck) -->
+  <g transform="translate(1110 520)">
+    <ellipse cx="120" cy="150" rx="150" ry="26" fill="#000000" fill-opacity="0.5"/>
+    <path d="M0 40 v90 a120 32 0 0 0 240 0 v-90 z" fill="url(#speaker)"/>
+    <ellipse cx="120" cy="40" rx="120" ry="32" fill="#1c1d28" stroke="#ef4444" stroke-width="9"/>
+    <ellipse cx="120" cy="40" rx="120" ry="32" fill="none" stroke="#ef4444" stroke-opacity="0.35" stroke-width="22"/>
+    <ellipse cx="120" cy="40" rx="86" ry="20" fill="#14151e"/>
+    <circle cx="90" cy="40" r="5" fill="#3a3b4a"/>
+    <circle cx="150" cy="40" r="5" fill="#3a3b4a"/>
+    <!-- grille -->
+    <g stroke="#ffffff" stroke-opacity="0.07" stroke-width="4">
+      <line x1="30" y1="96" x2="30" y2="140"/>
+      <line x1="60" y1="102" x2="60" y2="150"/>
+      <line x1="90" y1="106" x2="90" y2="156"/>
+      <line x1="120" y1="107" x2="120" y2="158"/>
+      <line x1="150" y1="106" x2="150" y2="156"/>
+      <line x1="180" y1="102" x2="180" y2="150"/>
+      <line x1="210" y1="96" x2="210" y2="140"/>
+    </g>
+  </g>
+
+  <!-- lamp -->
+  <g transform="translate(1230 260)">
+    <circle cx="0" cy="0" r="170" fill="url(#bulbGlow)"/>
+    <path d="M-52 10 a60 60 0 1 1 104 0 c-14 18 -20 30 -20 52 h-64 c0 -22 -6 -34 -20 -52 z" fill="#ef4444" fill-opacity="0.9" stroke="#fca5a5" stroke-width="6" stroke-linejoin="round"/>
+    <rect x="-32" y="72" width="64" height="16" rx="6" fill="#c9cad6"/>
+    <rect x="-28" y="94" width="56" height="16" rx="6" fill="#c9cad6"/>
+    <path d="M-16 116 h32 l-8 14 h-16 z" fill="#c9cad6"/>
+    <g stroke="#ef4444" stroke-width="7" stroke-linecap="round">
+      <line x1="0" y1="-110" x2="0" y2="-140"/>
+      <line x1="-84" y1="-74" x2="-106" y2="-96"/>
+      <line x1="84" y1="-74" x2="106" y2="-96"/>
+      <line x1="-112" y1="0" x2="-142" y2="0"/>
+      <line x1="112" y1="0" x2="142" y2="0"/>
+    </g>
+  </g>
+</svg>
