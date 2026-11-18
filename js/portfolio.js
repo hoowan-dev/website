@@ -1,5 +1,10 @@
 document.addEventListener('DOMContentLoaded', function () {
   const modal = document.querySelector('.project-modal');
+  if (!modal) {
+    return;
+  }
+  // Which cards open the modal; a page can narrow it with data-cards on the modal element
+  const cardSelector = modal.dataset.cards || '.experience-card';
   const modalTitle = modal.querySelector('.project-modal-title');
   const modalSubtitle = modal.querySelector('.project-modal-subtitle');
   const modalDate = modal.querySelector('.project-modal-date');
@@ -8,7 +13,9 @@ document.addEventListener('DOMContentLoaded', function () {
   const modalImage = modal.querySelector('.project-modal-image');
   const closeButtons = modal.querySelectorAll('[data-modal-close], .project-modal-close');
 
-  async function openModal(card, href) {
+  async function openModal(clickedCard, href) {
+    // Summary cards (home page featured projects) carry the full portfolio article as projectSource
+    const card = clickedCard.projectSource || clickedCard;
     const title = card.querySelector('h3').innerText;
     const subtitle = card.querySelector('.item-subtitle').innerText;
     const date = card.querySelector('.item-header span').innerText;
@@ -111,22 +118,33 @@ document.addEventListener('DOMContentLoaded', function () {
     }
   });
 
-  document.querySelectorAll('.experience-card').forEach(function (card) {
+  document.querySelectorAll(cardSelector).forEach(function (card) {
     card.classList.add('is-clickable');
-    card.addEventListener('click', async function (event) {
-      // Action buttons (View Project, Play Demo, etc.) keep their normal link behavior
-      if (event.target.closest('.experience-actions a')) {
-        return;
-      }
-      // Don't hijack a click that finishes a text selection
-      const selection = window.getSelection();
-      if (selection && selection.toString().trim() !== '' && card.contains(selection.anchorNode)) {
-        return;
-      }
-      event.preventDefault();
-      const link = card.querySelector('.item-header h3 a');
-      await openModal(card, link ? link.getAttribute('href') : '#');
-    });
+  });
+
+  // Delegated so cards added after load (featured projects) work too
+  document.addEventListener('click', async function (event) {
+    const card = event.target.closest(cardSelector);
+    if (!card || modal.contains(card)) {
+      return;
+    }
+    // Action buttons (View Project, Play Demo, etc.) keep their normal link behavior
+    if (event.target.closest('.experience-actions a')) {
+      return;
+    }
+    // Ctrl/Cmd/Shift-click on a card that is itself a link keeps opening it in a new tab
+    if (card.matches('a[href]') && (event.ctrlKey || event.metaKey || event.shiftKey || event.button !== 0)) {
+      return;
+    }
+    // Don't hijack a click that finishes a text selection
+    const selection = window.getSelection();
+    if (selection && selection.toString().trim() !== '' && card.contains(selection.anchorNode)) {
+      return;
+    }
+    event.preventDefault();
+    const source = card.projectSource || card;
+    const link = source.querySelector('.item-header h3 a');
+    await openModal(card, link ? link.getAttribute('href') : '#');
   });
 
   closeButtons.forEach(function (button) {

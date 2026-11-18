@@ -41,6 +41,8 @@
   <link rel="icon" type="image/x-icon" href="favicon.ico" />
   <script src="js/components.js" defer></script>
   <script src="js/crt.js" defer></script>
+  <script src="js/featured.js" defer></script>
+  <script src="js/portfolio.js" defer></script>
 </head>
 <body id="top">
   <div class="page-shell">
@@ -56,7 +58,11 @@
 
     <main class="hero-layout">
       <section class="hero-panel">
-        <h1>Juan Becerra</h1>
+        <div class="hero-title">
+          <!-- Phone-only avatar; the sidebar photo is hidden at that size (see styles.css) -->
+          <img src="media/index/profile.jpg" alt="" class="hero-avatar" width="88" height="88" aria-hidden="true" />
+          <h1>Juan Becerra</h1>
+        </div>
         <p class="hero-copy">
           Juan Becerra is a software engineer with 5+ years in AAA game development, building gameplay, animation, tools, and AI systems for large-scale studio productions.
           His production tools have helped ship games and been adopted across multiple studios to speed up content creation, and lately he's been building at the intersection of game dev and AI: a retrieval-augmented generation (RAG) prototype for finding animations by style, mood, and posture, and <a href="portfolio.html#protoboy">ProtoBoy</a>, an MCP server that grounds AI coding agents in a game's design docs.
@@ -70,10 +76,6 @@
           He enjoys doing session work for recording artists and playing live shows, and has experience in music production. 
           That probably won't help much on the job, but please consider this when looking for a personality hire.
         </p>
-
-        <div class="hero-actions">
-          <a href="portfolio.html" class="primary-btn primary-btn--lg">View Portfolio &rarr;</a>
-        </div>
       </section>
 
       <aside class="sidebar">
@@ -99,6 +101,21 @@
         </section>
       </aside>
     </main>
+
+    <section id="featured" class="section" aria-labelledby="featured-heading">
+      <div class="section-inner">
+        <div class="section-header">
+          <h2 id="featured-heading">Featured Projects</h2>
+          <p>A few things I've built lately. There's plenty more where these came from.</p>
+        </div>
+        <!-- Pick the featured projects here: space-separated ids of <article> cards in portfolio.html, in display order.
+             js/featured.js builds each card from that article's image, title, and subtitle. -->
+        <div class="featured-grid" data-featured="protoboy fellowship hoowan"></div>
+        <div class="featured-actions">
+          <a href="portfolio.html" class="primary-btn">See All Projects &rarr;</a>
+        </div>
+      </div>
+    </section>
 
     <section id="experience" class="section">
       <div class="section-inner">
@@ -406,6 +423,20 @@
 
     <footer class="footer"></footer>
     <a href="#top" class="back-to-top" aria-label="Back to top">↑</a>
+
+    <!-- Only the featured project cards open this; experience and education cards stay plain -->
+    <div class="project-modal" aria-hidden="true" role="dialog" aria-modal="true" aria-label="Project details" data-cards=".featured-card">
+      <div class="project-modal-backdrop" data-modal-close></div>
+      <div class="project-modal-card">
+        <button type="button" class="project-modal-close" aria-label="Close project details">×</button>
+        <img class="project-modal-image" src="" alt="" style="display: none;">
+        <h2 class="project-modal-title"></h2>
+        <p class="project-modal-subtitle"></p>
+        <span class="project-modal-date"></span>
+        <div class="project-modal-description"></div>
+        <div class="project-modal-actions"></div>
+      </div>
+    </div>
 
   </div>
 </body>
